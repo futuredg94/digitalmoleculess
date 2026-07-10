@@ -298,9 +298,11 @@ HERO SECTION
 .hero-container{
 
     display:grid;
-    grid-template-columns:1.2fr 1fr;
-    gap:70px;
+    grid-template-columns:55% 45%;
+    gap:40px;
     align-items:center;
+
+}
 
 }
 
