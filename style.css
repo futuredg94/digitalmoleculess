@@ -55,9 +55,11 @@ ul{
 
 .container{
 
-    width:90%;
-    max-width:1200px;
+   .container{
+    width:92%;
+    max-width:1280px;
     margin:auto;
+}
 
 }
 
@@ -308,7 +310,9 @@ HERO SECTION
 
 .hero-content h1{
 
-    font-size:54px;
+    .hero-content h1{
+
+    font-size:46px;
     color:var(--dark);
     line-height:1.2;
     margin-bottom:25px;
@@ -340,10 +344,12 @@ HERO SECTION
 
 .hero-card{
 
-    width:360px;
+    .hero-card{
+
+    width:320px;
     background:#fff;
     border-radius:20px;
-    padding:45px;
+    padding:35px;
     text-align:center;
     box-shadow:var(--shadow);
     transition:.4s;
