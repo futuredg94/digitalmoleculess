@@ -306,6 +306,8 @@ HERO SECTION
 
 }
 
+}
+
 .tagline{
 
     display:inline-block;
@@ -344,18 +346,15 @@ HERO SECTION
     flex-wrap:wrap;
     align-items:center;
 
-}
-
 .hero-image{
 
     display:flex;
     justify-content:center;
+    align-items:center;
 
 }
 
 .hero-card{
-
-    .hero-card{
 
     width:320px;
     background:#fff;
@@ -386,6 +385,12 @@ HERO SECTION
     color:var(--dark);
     font-size:28px;
     margin-bottom:15px;
+
+}
+
+.hero-card p{
+
+    color:#666;
 
 }
 
