@@ -40,6 +40,7 @@ body {
 img {
     max-width: 100%;
     display: block;
+    object-fit: contain;
 }
 
 a {
@@ -97,6 +98,7 @@ p {
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
+    position: relative;
 }
 
 .logo {
@@ -176,6 +178,10 @@ p {
     gap: 20px;
 }
 
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
 .grid-3 {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
@@ -220,8 +226,14 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px;
 }
 
+.product-image img {
+    max-height: 100%;
+}
+
+/* ===== Product Info ===== */
 .product-info {
     padding: 15px;
 }
@@ -295,21 +307,7 @@ textarea:focus {
     margin-bottom: 20px;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    .hero {
-        padding: 60px 0;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-}
-/* ===== Mobile Navigation Fix ===== */
+/* ===== Mobile Navigation ===== */
 .nav-toggle {
     display: none;
     background: none;
@@ -318,13 +316,11 @@ textarea:focus {
     cursor: pointer;
 }
 
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
+
     .nav-toggle {
         display: block;
-    }
-
-    .nav {
-        position: relative;
     }
 
     .nav-links {
@@ -336,6 +332,7 @@ textarea:focus {
         width: 200px;
         border: 1px solid var(--border-color);
         display: none;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     }
 
     .nav-links.active {
@@ -345,5 +342,13 @@ textarea:focus {
     .nav-links a {
         padding: 12px;
         border-bottom: 1px solid var(--border-color);
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    h1 {
+        font-size: 2rem;
     }
 }
