@@ -102,29 +102,34 @@
 
     /* ===== Render Products ===== */
     function renderProducts() {
-        const grid = document.getElementById("product-grid");
-        const countEl = document.getElementById("product-count");
-        const emptyState = document.getElementById("empty-state");
+    const grid = document.getElementById("product-grid");
+    const countEl = document.getElementById("product-count");
+    const emptyState = document.getElementById("empty-state");
 
-        if (!grid) return;
+    if (!grid) return;
 
-        grid.innerHTML = "";
+    grid.innerHTML = "";
 
-        if (filteredProducts.length === 0) {
-            emptyState.style.display = "block";
-            countEl.textContent = "";
-            return;
-        } else {
-            emptyState.style.display = "none";
-        }
-
-        countEl.textContent = `${filteredProducts.length} product(s) found`;
-
-        filteredProducts.forEach(product => {
-            const card = createProductCard(product);
-            grid.appendChild(card);
-        });
+    if (!products.length) {
+        grid.innerHTML = "<p>Loading products...</p>";
+        return;
     }
+
+    if (filteredProducts.length === 0) {
+        emptyState.style.display = "block";
+        countEl.textContent = "0 products found";
+        return;
+    } else {
+        emptyState.style.display = "none";
+    }
+
+    countEl.textContent = `${filteredProducts.length} product${filteredProducts.length > 1 ? "s" : ""} found`;
+
+    filteredProducts.forEach(product => {
+        const card = createProductCard(product);
+        grid.appendChild(card);
+    });
+}
 
     /* ===== Create Product Card ===== */
     function createProductCard(product) {
