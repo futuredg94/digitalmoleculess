@@ -1,1 +1,48 @@
-
+[
+  {
+    "id": "DM000001",
+    "name": "Sample Product 1",
+    "category": "Impurity Standards",
+    "formula": "C20H25NO5",
+    "molecularWeight": "359.42",
+    "casNumber": "12345-67-8",
+    "purity": "98%",
+    "stock": "Available",
+    "structureImage": "DM000001.png",
+    "description": "Sample product for Digital Molecules catalogue.",
+    "keywords": [
+      "impurity",
+      "reference standard"
+    ]
+  },
+  {
+    "id": "DM000002",
+    "name": "Sample Product 2",
+    "category": "Specialty Chemicals",
+    "formula": "C18H21NO4",
+    "molecularWeight": "315.36",
+    "casNumber": "23456-78-9",
+    "purity": "99%",
+    "stock": "Available",
+    "structureImage": "DM000002.png",
+    "description": "Sample product for Digital Molecules catalogue.",
+    "keywords": [
+      "specialty chemical"
+    ]
+  },
+  {
+    "id": "DM000003",
+    "name": "Sample Product 3",
+    "category": "Impurity Standards",
+    "formula": "C22H28N2O6",
+    "molecularWeight": "416.47",
+    "casNumber": "34567-89-0",
+    "purity": "98%",
+    "stock": "On Request",
+    "structureImage": "DM000003.png",
+    "description": "Sample product for Digital Molecules catalogue.",
+    "keywords": [
+      "analytical standard"
+    ]
+  }
+]
