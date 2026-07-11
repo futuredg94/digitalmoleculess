@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details | Digital Molecules</title>
+
     <meta name="description" content="Detailed product information including CAS number, molecular weight, and specifications.">
 
     <link rel="stylesheet" href="css/style.css">
@@ -21,21 +22,52 @@
         </div>
     </header>
 
-    <!-- ===== Product Detail ===== -->
-    <section class="section">
-        <div class="container" id="product-container">
-            <!-- Injected via JS -->
-        </div>
-    </section>
+    <main>
 
-    <!-- ===== Not Found ===== -->
-    <section id="not-found" class="section" style="display: none;">
-        <div class="container text-center">
-            <h2>Product Not Found</h2>
-            <p>The requested product could not be located.</p>
-            <a href="products.html" class="btn mt-20">Back to Products</a>
-        </div>
-    </section>
+        <!-- ===== Breadcrumb ===== -->
+        <section class="section">
+            <div class="container">
+                <p>
+                    <a href="index.html">Home</a> > 
+                    <a href="products.html">Products</a> > 
+                    <span id="breadcrumb-name">Product</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== Product Detail ===== -->
+        <section class="section">
+            <div class="container" id="product-container"></div>
+        </section>
+
+        <!-- ===== RFQ FORM ===== -->
+        <section id="rfq-form" class="section" style="display:none;">
+            <div class="container">
+                <h2>Request a Quote</h2>
+
+                <form id="quoteForm">
+                    <input type="text" id="rfq-product" readonly>
+
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+
+                    <textarea id="message" placeholder="Additional details (optional)"></textarea>
+
+                    <button type="submit" class="btn mt-20">Submit Request</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ===== Not Found ===== -->
+        <section id="not-found" class="section" style="display: none;">
+            <div class="container text-center">
+                <h2>Product Not Found</h2>
+                <p>The requested product could not be located.</p>
+                <a href="products.html" class="btn mt-20">Back to Products</a>
+            </div>
+        </section>
+
+    </main>
 
     <!-- ===== Footer ===== -->
     <footer class="footer">
@@ -43,6 +75,14 @@
             <p>© 2026 Digital Molecules. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- ===== EmailJS ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("YOUR_PUBLIC_KEY");
+        })();
+    </script>
 
     <script src="js/script.js"></script>
 
@@ -58,22 +98,16 @@
 
         async function init() {
             const id = getProductId();
-            if (!id) {
-                showNotFound();
-                return;
-            }
+            if (!id) return showNotFound();
 
             try {
-                const response = await fetch("data/products.json");
-                if (!response.ok) throw new Error();
+                const res = await fetch("data/products.json");
+                if (!res.ok) throw new Error();
 
-                const products = await response.json();
+                const products = await res.json();
                 const product = products.find(p => p.id === id);
 
-                if (!product) {
-                    showNotFound();
-                    return;
-                }
+                if (!product) return showNotFound();
 
                 renderProduct(product);
 
@@ -84,19 +118,21 @@
         }
 
         function getProductId() {
-            const params = new URLSearchParams(window.location.search);
-            return params.get("id");
+            return new URLSearchParams(window.location.search).get("id");
         }
 
         function renderProduct(product) {
             const container = document.getElementById("product-container");
+            document.getElementById("breadcrumb-name").textContent = product.name;
 
             container.innerHTML = `
                 <div class="grid grid-2">
 
                     <div>
                         <div class="product-image">
-                            <img src="${product.image || 'images/products/default.png'}" alt="${product.name}">
+                            <img src="${product.image || 'images/products/default.png'}" 
+                                 alt="${product.name}"
+                                 onerror="this.src='images/products/default.png'">
                         </div>
                     </div>
 
@@ -119,6 +155,10 @@
                                 ${specRows(product.specifications)}
                             </tbody>
                         </table>
+
+                        <button class="btn mt-20" onclick="openRFQ('${product.name}')">
+                            Request Quote
+                        </button>
                     </div>
 
                 </div>
@@ -134,12 +174,7 @@
             if (!specs) return "<tr><td>No specifications available</td></tr>";
 
             return Object.entries(specs)
-                .map(([key, value]) => `
-                    <tr>
-                        <th>${formatKey(key)}</th>
-                        <td>${value}</td>
-                    </tr>
-                `)
+                .map(([k, v]) => `<tr><th>${formatKey(k)}</th><td>${v}</td></tr>`)
                 .join("");
         }
 
@@ -153,6 +188,43 @@
         }
 
     })();
+
+    /* ===== RFQ ===== */
+
+    function openRFQ(productName) {
+        const form = document.getElementById("rfq-form");
+        const input = document.getElementById("rfq-product");
+
+        form.style.display = "block";
+        input.value = productName;
+
+        form.scrollIntoView({ behavior: "smooth" });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("quoteForm");
+        if (!form) return;
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const data = {
+                product: document.getElementById("rfq-product").value,
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                message: document.getElementById("message").value
+            };
+
+            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", data)
+                .then(() => {
+                    alert("Request sent successfully.");
+                    form.reset();
+                })
+                .catch(() => {
+                    alert("Failed to send request.");
+                });
+        });
+    });
     </script>
 
 </body>
