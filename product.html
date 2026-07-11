@@ -1,1 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Product Details | Digital Molecules</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="container">
+
+<a href="index.html" class="logo">
+<img src="logo.png" alt="Digital Molecules">
+</a>
+
+<nav class="navbar">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html" class="active">Products</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+</div>
+
+</header>
+
+<section class="page-hero">
+
+<div class="container">
+
+<h1 id="productName">Loading...</h1>
+
+<p id="productCategory"></p>
+
+</div>
+
+</section>
+
+<section class="products-section">
+
+<div class="container">
+
+<div class="product-card">
+
+<div class="structure">
+
+<img
+id="productImage"
+src=""
+alt="Chemical Structure">
+
+</div>
+
+<div class="product-content">
+
+<div class="info-row">
+<span class="info-title">Catalog No.</span>
+<span id="catalog"></span>
+</div>
+
+<div class="info-row">
+<span class="info-title">Molecular Formula</span>
+<span id="formula"></span>
+</div>
+
+<div class="info-row">
+<span class="info-title">Molecular Weight</span>
+<span id="mw"></span>
+</div>
+
+<div class="info-row">
+<span class="info-title">CAS Number</span>
+<span id="cas"></span>
+</div>
+
+<div class="info-row">
+<span class="info-title">Purity</span>
+<span id="purity"></span>
+</div>
+
+<div class="info-row">
+<span class="info-title">Stock</span>
+<span id="stock"></span>
+</div>
+
+<p
+style="margin-top:25px;"
+id="description">
+
+</p>
+
+<div class="product-buttons">
+
+<a
+href="contact.html"
+class="quote-btn">
+
+Request Quote
+
+</a>
+
+<a
+href="products.html"
+class="view-btn">
+
+Back to Products
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<div class="container">
+
+<p>
+
+© <span id="year"></span>
+Digital Molecules.
+
+</p>
+
+</div>
+
+</footer>
+
+<script>
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+const params =
+new URLSearchParams(window.location.search);
+
+const id =
+params.get("id");
+
+fetch("data/products.json")
+
+.then(res => res.json())
+
+.then(products=>{
+
+const product =
+products.find(p=>p.id===id);
+
+if(!product) return;
+
+document.getElementById("productName").textContent =
+product.name;
+
+document.getElementById("productCategory").textContent =
+product.category;
+
+document.getElementById("catalog").textContent =
+product.id;
+
+document.getElementById("formula").textContent =
+product.formula;
+
+document.getElementById("mw").textContent =
+product.molecularWeight;
+
+document.getElementById("cas").textContent =
+product.casNumber;
+
+document.getElementById("purity").textContent =
+product.purity;
+
+document.getElementById("stock").textContent =
+product.stock;
+
+document.getElementById("description").textContent =
+product.description;
+
+document.getElementById("productImage").src =
+"images/products/" + product.structureImage;
+
+});
+
+</script>
+
+</body>
+
+</html>
