@@ -42,7 +42,9 @@
         .filter-bar select { padding: 8px 16px; border-radius: 8px; border: 1px solid #dce3ec; font-family: 'Inter', sans-serif; font-size: 0.85rem; background: #fff; cursor: pointer; }
         .filter-bar .results-count { font-size: 0.9rem; color: #5a6f87; }
 
-        /* Products */
+        /* ============================================================ */
+        /* ===== PRODUCTS SECTION ===== */
+        /* ============================================================ */
         .products-section { padding: 30px 0 60px; }
         .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
 
@@ -71,7 +73,6 @@
         .product-card .favorite-icon { float: right; color: #b0c4d8; cursor: pointer; font-size: 1.1rem; }
         .product-card .favorite-icon:hover { color: #e74c3c; }
 
-        /* Pagination */
         .pagination { display: flex; justify-content: center; gap: 8px; margin-top: 40px; }
         .pagination a { display: inline-block; padding: 8px 16px; border-radius: 8px; border: 1px solid #dce3ec; font-weight: 600; font-size: 0.85rem; transition: all 0.3s; }
         .pagination a:hover, .pagination a.active { background: #0f4c81; color: #fff; border-color: #0f4c81; }
@@ -84,8 +85,10 @@
         .about-header .about-badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: #0f4c81; text-transform: uppercase; letter-spacing: 2px; border-bottom: 3px solid #0f4c81; padding-bottom: 6px; margin-bottom: 12px; }
         .about-header h2 { font-size: 2.4rem; font-weight: 800; color: #0a2a44; line-height: 1.2; margin-bottom: 16px; }
         .about-header .about-subtitle { font-size: 1.05rem; color: #4a5b72; max-width: 700px; margin: 0 auto; line-height: 1.7; }
+        .about-header .btn-about { display: inline-block; background: transparent; color: #0f4c81; padding: 10px 32px; border-radius: 40px; font-weight: 600; font-size: 0.95rem; border: 2px solid #0f4c81; transition: all 0.3s; cursor: pointer; margin-top: 12px; }
+        .about-header .btn-about:hover { background: #0f4c81; color: #fff; }
 
-        .about-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 50px; }
+        .about-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin: 50px 0; }
         .stat-box { background: #f8fafc; padding: 24px 16px; border-radius: 12px; text-align: center; border: 1px solid #e9edf2; transition: all 0.3s; }
         .stat-box:hover { transform: translateY(-6px); box-shadow: 0 8px 25px rgba(15,76,129,0.08); }
         .stat-box .stat-number { display: block; font-size: 2.2rem; font-weight: 800; color: #0f4c81; }
@@ -99,13 +102,15 @@
         .value-card h4 { font-weight: 700; color: #0a2a44; font-size: 1rem; margin-bottom: 6px; }
         .value-card p { font-size: 0.9rem; color: #4a5b72; line-height: 1.5; }
 
-        .about-cta { background: linear-gradient(135deg, #eef4fa 0%, #d9e4f0 100%); padding: 50px 40px; border-radius: 16px; text-align: center; border: 1px solid #e9edf2; margin-top: 30px; }
+        .about-cta { background: linear-gradient(135deg, #eef4fa 0%, #d9e4f0 100%); padding: 50px 40px; border-radius: 16px; text-align: center; border: 1px solid #e9edf2; }
         .about-cta h3 { font-size: 1.8rem; font-weight: 700; color: #0a2a44; margin-bottom: 8px; }
         .about-cta p { font-size: 1.05rem; color: #3d4f66; margin-bottom: 24px; }
-        .about-cta .btn-about-primary { background: #0f4c81; color: #fff; padding: 12px 34px; border-radius: 40px; font-weight: 700; font-size: 0.95rem; border: none; cursor: pointer; transition: background 0.3s; }
-        .about-cta .btn-about-primary:hover { background: #0a3a62; }
-        .about-cta .btn-about-secondary { background: transparent; color: #0f4c81; padding: 11px 32px; border-radius: 40px; font-weight: 700; font-size: 0.95rem; border: 2px solid #0f4c81; cursor: pointer; transition: all 0.3s; }
-        .about-cta .btn-about-secondary:hover { background: #0f4c81; color: #fff; }
+        .about-cta .cta-phone { display: inline-block; background: #0f4c81; color: #fff; padding: 12px 34px; border-radius: 40px; font-weight: 700; font-size: 0.95rem; margin: 0 10px 10px 0; transition: background 0.3s; border: none; cursor: pointer; }
+        .about-cta .cta-phone:hover { background: #0a3a62; }
+        .about-cta .cta-phone i { margin-right: 8px; }
+        .about-cta .cta-email { display: inline-block; background: transparent; color: #0f4c81; padding: 11px 32px; border-radius: 40px; font-weight: 700; font-size: 0.95rem; border: 2px solid #0f4c81; transition: all 0.3s; cursor: pointer; }
+        .about-cta .cta-email:hover { background: #0f4c81; color: #fff; }
+        .about-cta .cta-email i { margin-right: 8px; }
 
         /* ============================================================ */
         /* ===== CONTACT SECTION ===== */
@@ -125,10 +130,10 @@
         .contact-cta { background: linear-gradient(135deg, #eef4fa 0%, #d9e4f0 100%); padding: 40px; border-radius: 16px; text-align: center; border: 1px solid #e9edf2; margin-top: 30px; }
         .contact-cta h3 { font-size: 1.8rem; font-weight: 700; color: #0a2a44; margin-bottom: 8px; }
         .contact-cta p { font-size: 1.05rem; color: #3d4f66; margin-bottom: 20px; }
-        .contact-cta .cta-phone { display: inline-block; background: #0f4c81; color: #fff; padding: 12px 34px; border-radius: 40px; font-weight: 700; font-size: 0.95rem; margin: 0 10px 10px 0; transition: background 0.3s; }
+        .contact-cta .cta-phone { display: inline-block; background: #0f4c81; color: #fff; padding: 12px 34px; border-radius: 40px; font-weight: 700; font-size: 0.95rem; margin: 0 10px 10px 0; transition: background 0.3s; border: none; cursor: pointer; }
         .contact-cta .cta-phone:hover { background: #0a3a62; }
         .contact-cta .cta-phone i { margin-right: 8px; }
-        .contact-cta .cta-email { display: inline-block; background: transparent; color: #0f4c81; padding: 11px 32px; border-radius: 40px; font-weight: 700; font-size: 0.95rem; border: 2px solid #0f4c81; transition: all 0.3s; }
+        .contact-cta .cta-email { display: inline-block; background: transparent; color: #0f4c81; padding: 11px 32px; border-radius: 40px; font-weight: 700; font-size: 0.95rem; border: 2px solid #0f4c81; transition: all 0.3s; cursor: pointer; }
         .contact-cta .cta-email:hover { background: #0f4c81; color: #fff; }
         .contact-cta .cta-email i { margin-right: 8px; }
 
@@ -158,7 +163,6 @@
             .about-header h2 { font-size: 1.6rem; }
             .about-cta { padding: 30px 20px; }
             .contact-cta { padding: 30px 20px; }
-            .contact-cta .cta-phone, .contact-cta .cta-email { display: block; width: 100%; margin: 6px 0; }
         }
 
         @media (max-width: 480px) {
@@ -169,6 +173,8 @@
             .about-header h2 { font-size: 1.3rem; }
             .about-cta { padding: 24px 16px; }
             .contact-cta { padding: 24px 16px; }
+            .contact-cta .cta-phone, .contact-cta .cta-email { display: block; width: 100%; margin: 6px 0; }
+            .about-cta .cta-phone, .about-cta .cta-email { display: block; width: 100%; margin: 6px 0; }
         }
     </style>
 </head>
@@ -240,12 +246,14 @@
         </div>
     </div>
 
+    <!-- ============================================================ -->
     <!-- ===== PRODUCTS SECTION ===== -->
+    <!-- ============================================================ -->
     <section class="products-section">
         <div class="container">
             <div class="product-grid">
 
-                <!-- Product 1 -->
+                <!-- Product 1: DM-0001 -->
                 <div class="product-card">
                     <div class="favorite-icon"><i class="far fa-heart"></i></div>
                     <div class="structure-image">
@@ -269,7 +277,7 @@
                     </div>
                 </div>
 
-                <!-- Product 2 -->
+                <!-- Product 2: DM-0002 -->
                 <div class="product-card">
                     <div class="favorite-icon"><i class="far fa-heart"></i></div>
                     <div class="structure-image">
@@ -293,7 +301,7 @@
                     </div>
                 </div>
 
-                <!-- Product 3 -->
+                <!-- Product 3: DM-0003 -->
                 <div class="product-card">
                     <div class="favorite-icon"><i class="far fa-heart"></i></div>
                     <div class="structure-image">
@@ -317,7 +325,7 @@
                     </div>
                 </div>
 
-                <!-- Product 4 -->
+                <!-- Product 4: DM-0004 -->
                 <div class="product-card">
                     <div class="favorite-icon"><i class="far fa-heart"></i></div>
                     <div class="structure-image">
@@ -341,7 +349,7 @@
                     </div>
                 </div>
 
-                <!-- Product 5 -->
+                <!-- Product 5: DM-0005 -->
                 <div class="product-card">
                     <div class="favorite-icon"><i class="far fa-heart"></i></div>
                     <div class="structure-image">
@@ -365,7 +373,7 @@
                     </div>
                 </div>
 
-                <!-- Product 6 -->
+                <!-- Product 6: DM-0006 -->
                 <div class="product-card">
                     <div class="favorite-icon"><i class="far fa-heart"></i></div>
                     <div class="structure-image">
@@ -391,6 +399,7 @@
 
             </div>
 
+            <!-- ===== PAGINATION ===== -->
             <div class="pagination">
                 <a href="#" class="active">1</a>
                 <a href="#">2</a>
@@ -415,25 +424,11 @@
                     We are committed to providing high quality products, accurate documentation and reliable
                     service to support pharmaceutical research and development worldwide.
                 </p>
+                <a href="#" class="btn-about">Learn More About Us</a>
             </div>
 
-            <div class="about-stats">
-                <div class="stat-box">
-                    <span class="stat-number">20,000+</span>
-                    <span class="stat-label">Products</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">98%</span>
-                    <span class="stat-label">Purity</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">24/7</span>
-                    <span class="stat-label">Support</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Countries</span>
-                </div>
+            <div style="text-align:center; margin: 40px 0 30px;">
+                <h2 style="font-size:1.8rem; font-weight:700; color:#0a2a44;">Why Choose Digital Molecules?</h2>
             </div>
 
             <div class="about-values">
@@ -459,11 +454,30 @@
                 </div>
             </div>
 
+            <div class="about-stats">
+                <div class="stat-box">
+                    <span class="stat-number">20,000+</span>
+                    <span class="stat-label">Products</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Purity</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Support</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Countries</span>
+                </div>
+            </div>
+
             <div class="about-cta">
                 <h3>Have a Question or Need a Quote?</h3>
                 <p>We are here to help you. Get in touch with us today.</p>
-                <a href="tel:+918919727242" class="btn-about-primary"><i class="fas fa-phone"></i> +91 8919727242</a>
-                <a href="mailto:purchase@digitalmolecules.com" class="btn-about-secondary"><i class="fas fa-envelope"></i> Email Us</a>
+                <a href="tel:+918919727242" class="cta-phone"><i class="fas fa-phone"></i> +91 8919727242</a>
+                <a href="mailto:purchase@digitalmolecules.com" class="cta-email"><i class="fas fa-envelope"></i> Email Us</a>
             </div>
 
         </div>
