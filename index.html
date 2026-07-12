@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Digital Molecules - Impurity Standards & Fine Chemicals</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
-    <!-- ===== HEADER / NAVIGATION ===== -->
+    <!-- ===== HEADER ===== -->
     <header>
         <div class="container nav-container">
             <div class="logo">
-                <h1>Digital Molecules</h1>
-                <span>Impurity Standards &amp; Fine Chemicals</span>
+                <i class="fas fa-flask" style="color: #a78bfa; font-size: 2rem;"></i>
+                <div>
+                    <h1>Digital Molecules</h1>
+                    <span>Impurity Standards &amp; Fine Chemicals</span>
+                </div>
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">About</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="products.html">Products</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -26,71 +30,113 @@
         </div>
     </header>
 
-    <!-- ===== HERO SECTION ===== -->
+    <!-- ===== HERO ===== -->
     <section class="hero">
-        <div class="container">
-            <h2>High-Purity Reference Standards &amp; Impurities</h2>
+        <div class="hero-particles"></div>
+        <div class="container hero-content">
+            <div class="hero-badge">🌟 Trusted Since 2024</div>
+            <h2>High-Purity Reference <br/><span class="gradient-text">Standards &amp; Impurities</span></h2>
             <p>Trusted supplier of pharmaceutical impurities, reference standards, and fine chemicals for R&D and quality control.</p>
-            <a href="products.html" class="btn btn-primary">Browse Products</a>
+            <div class="hero-buttons">
+                <a href="products.html" class="btn btn-primary"><i class="fas fa-flask"></i> Browse Products</a>
+                <a href="contact.html" class="btn btn-outline"><i class="fas fa-envelope"></i> Contact Us</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="stat-number">20,000+</span>
+                    <span class="stat-label">Products</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Purity</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Support</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- ===== ABOUT US ===== -->
+    <!-- ===== ABOUT ===== -->
     <section class="about">
         <div class="container">
-            <h2 class="section-title">About Digital Molecules</h2>
+            <div class="about-header">
+                <span class="section-tag">About Us</span>
+                <h2 class="section-title">Who We Are</h2>
+                <p class="section-subtitle">We're passionate about delivering quality and innovation to the pharmaceutical industry.</p>
+            </div>
             <div class="about-grid">
                 <div class="about-text">
                     <p><strong>Digital Molecules</strong> is a dedicated supplier of impurity standards and fine chemicals serving the pharmaceutical, biotech, and research communities.</p>
                     <p>We specialize in providing high-purity reference standards, drug impurities, metabolites, and custom synthesis services to accelerate your drug development programs.</p>
-                    <p>Our team is committed to quality, reliability, and on-time delivery — supporting scientists from early discovery through commercial manufacturing.</p>
-                    <ul class="about-features">
-                        <li>&#10003; High-purity standards (&gt;95% by HPLC)</li>
-                        <li>&#10003; Extensive catalog with 20,000+ products</li>
-                        <li>&#10003; Custom synthesis capabilities</li>
-                        <li>&#10003; Competitive pricing &amp; fast shipping</li>
-                    </ul>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle" style="color: #10b981;"></i>
+                            <span>High-purity standards (>95% by HPLC)</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle" style="color: #10b981;"></i>
+                            <span>Extensive catalog with 20,000+ products</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle" style="color: #10b981;"></i>
+                            <span>Custom synthesis capabilities</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle" style="color: #10b981;"></i>
+                            <span>Competitive pricing &amp; fast shipping</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <h3>20,000+</h3>
-                        <p>Products Available</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>98%</h3>
-                        <p>Purity Standards</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>24/7</h3>
-                        <p>Customer Support</p>
+                <div class="about-image">
+                    <div class="about-image-placeholder">
+                        <i class="fas fa-microscope"></i>
+                        <p>Quality Assurance</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== WHY CHOOSE US ===== -->
-    <section class="why-us">
+    <!-- ===== SERVICES ===== -->
+    <section class="services">
         <div class="container">
-            <h2 class="section-title">Why Choose Digital Molecules?</h2>
-            <div class="features-grid">
-                <div class="feature">
-                    <h3>&#128202; Quality Assurance</h3>
+            <div class="services-header">
+                <span class="section-tag">What We Offer</span>
+                <h2 class="section-title">Our Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" style="background: linear-gradient(135deg, #fef3c7, #fde68a);">
+                    <div class="service-icon" style="background: #f59e0b;">🔬</div>
+                    <h3>Quality Assurance</h3>
                     <p>Every product is rigorously tested with HPLC, LC-MS, and NMR to ensure purity and identity.</p>
                 </div>
-                <div class="feature">
-                    <h3>&#128736; Custom Synthesis</h3>
-                    <p>Need a specific impurity or reference standard? We offer custom synthesis to meet your exact requirements.</p>
+                <div class="service-card" style="background: linear-gradient(135deg, #dbeafe, #93c5fd);">
+                    <div class="service-icon" style="background: #3b82f6;">🧪</div>
+                    <h3>Custom Synthesis</h3>
+                    <p>We offer custom synthesis to meet your exact requirements for specific impurities and standards.</p>
                 </div>
-                <div class="feature">
-                    <h3>&#128230; Global Supply</h3>
+                <div class="service-card" style="background: linear-gradient(135deg, #d1fae5, #6ee7b7);">
+                    <div class="service-icon" style="background: #10b981;">🌍</div>
+                    <h3>Global Supply</h3>
                     <p>We serve customers worldwide with reliable shipping and logistics support.</p>
                 </div>
-                <div class="feature">
-                    <h3>&#128218; Regulatory Support</h3>
+                <div class="service-card" style="background: linear-gradient(135deg, #ede9fe, #a78bfa);">
+                    <div class="service-icon" style="background: #7c3aed;">📚</div>
+                    <h3>Regulatory Support</h3>
                     <p>Our documentation supports your regulatory filings and quality control processes.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- ===== CALL TO ACTION ===== -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Partner With Us?</h2>
+            <p>Explore our extensive catalog of high-purity reference standards and fine chemicals.</p>
+            <a href="products.html" class="btn btn-primary"><i class="fas fa-arrow-right"></i> View All Products</a>
         </div>
     </section>
 
@@ -101,19 +147,24 @@
                 <div>
                     <h4>Digital Molecules</h4>
                     <p>Impurity Standards &amp; Fine Chemicals</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
                 <div>
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">About</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="products.html">Products</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4>Contact</h4>
-                    <p>Email: purchase@digitalmoleculess.com</p>
-                    <p>Phone: +91 8919727242</p>
+                    <p><i class="fas fa-envelope"></i> purchase@digitalmoleculess.com</p>
+                    <p><i class="fas fa-phone"></i> +91 8919727242</p>
                 </div>
             </div>
             <div class="footer-bottom">
