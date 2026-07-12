@@ -1,106 +1,166 @@
-/* =========================
-   Digital Molecules V2.0
-   Global Script
-   ========================= */
+// ============================================
+// 1. HAMBURGER MENU TOGGLE (Mobile Navigation)
+// ============================================
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.querySelector('nav ul');
 
-(function () {
-    "use strict";
-
-    /* ===== DOM Ready ===== */
-    document.addEventListener("DOMContentLoaded", function () {
-        initNavigation();
-        initSmoothScroll();
-        highlightActiveNav();
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
     });
 
-    /* ===== Navigation (Mobile Toggle Ready) ===== */
-    function initNavigation() {
-        const nav = document.querySelector(".nav");
-        if (!nav) return;
-
-        // Prevent duplicate toggle button
-        if (nav.querySelector(".nav-toggle")) return;
-
-        // Create mobile toggle button
-        const toggle = document.createElement("button");
-        toggle.className = "nav-toggle";
-        toggle.setAttribute("aria-label", "Toggle navigation");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.innerHTML = "☰";
-
-        nav.appendChild(toggle);
-
-        const navLinks = document.querySelector(".nav-links");
-        if (!navLinks) return;
-
-        toggle.addEventListener("click", function () {
-            const isActive = navLinks.classList.toggle("active");
-            toggle.setAttribute("aria-expanded", isActive);
+    // Close menu when a link is clicked (on mobile)
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('open');
         });
+    });
+}
 
-        // Close menu on link click (mobile UX)
-        const links = navLinks.querySelectorAll("a");
-        links.forEach(link => {
-            link.addEventListener("click", () => {
-                navLinks.classList.remove("active");
-                toggle.setAttribute("aria-expanded", "false");
+// ============================================
+// 2. SMOOTH SCROLLING (for anchor links)
+// ============================================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
             });
+        }
+    });
+});
+
+// ============================================
+// 3. SCROLL ANIMATIONS (Reveal elements on scroll)
+// ============================================
+const revealElements = document.querySelectorAll('.feature, .stat-card, .product-card');
+
+const revealOnScroll = () => {
+    revealElements.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const revealPoint = 150;
+
+        if (elementTop < windowHeight - revealPoint) {
+            el.classList.add('revealed');
+        }
+    });
+};
+
+// Add CSS for reveal animation
+const style = document.createElement('style');
+style.textContent = `
+    .feature, .stat-card, .product-card {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .feature.revealed, .stat-card.revealed, .product-card.revealed {
+        opacity: 1;
+        transform: translateY(0);
+    }
+`;
+document.head.appendChild(style);
+
+// Run on load and scroll
+window.addEventListener('load', revealOnScroll);
+window.addEventListener('scroll', revealOnScroll);
+
+// ============================================
+// 4. NAVBAR SHADOW ON SCROLL (optional)
+// ============================================
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        header.style.boxShadow = '0 4px 30px rgba(0,0,0,0.4)';
+    } else {
+        header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.3)';
+    }
+});
+
+// ============================================
+// 5. PRODUCT SEARCH/FILTER (for products.html)
+// ============================================
+const searchInput = document.getElementById('productSearch');
+const productCards = document.querySelectorAll('.product-card');
+
+if (searchInput) {
+    searchInput.addEventListener('keyup', function () {
+        const searchTerm = this.value.toLowerCase().trim();
+
+        productCards.forEach(card => {
+            const productName = card.querySelector('h3')?.textContent?.toLowerCase() || '';
+            const productCategory = card.querySelector('.product-cat')?.textContent?.toLowerCase() || '';
+            const productDesc = card.querySelector('.product-desc')?.textContent?.toLowerCase() || '';
+            const catalogNo = card.querySelector('.product-details span:first-child')?.textContent?.toLowerCase() || '';
+
+            const match = productName.includes(searchTerm) ||
+                          productCategory.includes(searchTerm) ||
+                          productDesc.includes(searchTerm) ||
+                          catalogNo.includes(searchTerm);
+
+            card.style.display = match ? 'block' : 'none';
         });
-    }
+    });
+}
 
-    /* ===== Smooth Scroll for Anchor Links ===== */
-    function initSmoothScroll() {
-        const links = document.querySelectorAll('a[href^="#"]');
+// ============================================
+// 6. CONTACT FORM VALIDATION (for contact.html)
+// ============================================
+const contactForm = document.querySelector('.contact-form form');
 
-        links.forEach(link => {
-            link.addEventListener("click", function (e) {
-                const targetId = this.getAttribute("href");
+if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+        const name = document.getElementById('name')?.value.trim();
+        const email = document.getElementById('email')?.value.trim();
+        const message = document.getElementById('message')?.value.trim();
 
-                if (targetId && targetId.length > 1) {
-                    const targetEl = document.querySelector(targetId);
-                    if (targetEl) {
-                        e.preventDefault();
-                        targetEl.scrollIntoView({
-                            behavior: "smooth",
-                            block: "start"
-                        });
-                    }
-                }
-            });
-        });
-    }
+        if (!name || !email || !message) {
+            e.preventDefault();
+            alert('Please fill in all required fields.');
+            return;
+        }
 
-    /* ===== Active Navigation Highlight ===== */
-    function highlightActiveNav() {
-        const links = document.querySelectorAll(".nav-links a");
-        const current = window.location.pathname.split("/").pop() || "index.html";
+        if (!email.includes('@') || !email.includes('.')) {
+            e.preventDefault();
+            alert('Please enter a valid email address.');
+            return;
+        }
 
-        links.forEach(link => {
-            const href = link.getAttribute("href");
-            if (href === current) {
-                link.style.color = "#328cc1";
-            }
-        });
-    }
+        // Optional: Show success message
+        alert('Thank you! Your message has been sent. We\'ll get back to you soon.');
+    });
+}
 
-    /* ===== Utility: Format Number ===== */
-    function formatNumber(value) {
-        if (!value && value !== 0) return "";
-        return Number(value).toLocaleString();
-    }
+// ============================================
+// 7. PRODUCT INQUIRY BUTTONS (pre-fill email)
+// ============================================
+document.querySelectorAll('.btn-small').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('mailto:')) {
+            // The email link already works, but we can track clicks
+            console.log('Product inquiry clicked: ' + href);
+        }
+    });
+});
 
-    /* ===== Utility: Create Element ===== */
-    function createElement(tag, className, text) {
-        const el = document.createElement(tag);
-        if (className) el.className = className;
-        if (text !== undefined && text !== null) el.textContent = text;
-        return el;
-    }
+// ============================================
+// 8. COPYRIGHT YEAR AUTO-UPDATE
+// ============================================
+const footerYear = document.querySelector('.footer-bottom p');
+if (footerYear) {
+    const currentYear = new Date().getFullYear();
+    footerYear.innerHTML = footerYear.innerHTML.replace('2026', currentYear);
+}
 
-    /* ===== Expose Utilities Globally ===== */
-    window.DM = {
-        formatNumber,
-        createElement
-    };
-
-})();
+// ============================================
+// 9. CONSOLE WELCOME MESSAGE (fun!)
+// ============================================
+console.log('🚀 Welcome to Digital Molecules!');
+console.log('📧 For inquiries: purchase@digitalmoleculess.com');
+console.log('📞 Phone: +91 8919727242');
