@@ -1,190 +1,104 @@
-/* =========================
-   Digital Molecules V2.0
-   Products Script
-   ========================= */
-
-(function () {
-    "use strict";
-
-    let products = [];
-    let filteredProducts = [];
-
-    document.addEventListener("DOMContentLoaded", init);
-
-    async function init() {
-        try {
-            const response = await fetch("data/products.json");
-            if (!response.ok) throw new Error("Failed to load product data");
-
-            products = await response.json();
-            filteredProducts = [...products];
-
-            bindUI();
-            renderProducts();
-        } catch (error) {
-            console.error(error);
-            showError("Unable to load product catalog.");
-        }
-    }
-
-    /* ===== UI Bindings ===== */
-    function bindUI() {
-        const searchInput = document.getElementById("search");
-        const sortSelect = document.getElementById("sort");
-        const resetBtn = document.getElementById("reset");
-
-        if (searchInput) {
-            searchInput.addEventListener("input", handleSearch);
-        }
-
-        if (sortSelect) {
-            sortSelect.addEventListener("change", handleSort);
-        }
-
-        if (resetBtn) {
-            resetBtn.addEventListener("click", resetFilters);
-        }
-    }
-
-    /* ===== Search ===== */
-    function handleSearch(e) {
-        const query = e.target.value.toLowerCase().trim();
-
-        filteredProducts = products.filter(p => {
-            return (
-                (p.name && p.name.toLowerCase().includes(query)) ||
-                (p.cas && p.cas.toLowerCase().includes(query))
-            );
-        });
-
-        applySort();
-        renderProducts();
-    }
-
-    /* ===== Sort ===== */
-    function handleSort() {
-        applySort();
-        renderProducts();
-    }
-
-    function applySort() {
-        const sortValue = document.getElementById("sort").value;
-
-        filteredProducts.sort((a, b) => {
-            switch (sortValue) {
-                case "name":
-                    return a.name.localeCompare(b.name);
-
-                case "name-desc":
-                    return b.name.localeCompare(a.name);
-
-                case "mw":
-                    return (a.mw || 0) - (b.mw || 0);
-
-                case "mw-desc":
-                    return (b.mw || 0) - (a.mw || 0);
-
-                default:
-                    return 0;
-            }
-        });
-    }
-
-    /* ===== Reset ===== */
-    function resetFilters() {
-        document.getElementById("search").value = "";
-        document.getElementById("sort").value = "name";
-
-        filteredProducts = [...products];
-        applySort();
-        renderProducts();
-    }
-
-    /* ===== Render Products ===== */
-    function renderProducts() {
-    const grid = document.getElementById("product-grid");
-    const countEl = document.getElementById("product-count");
-    const emptyState = document.getElementById("empty-state");
-
-    if (!grid) return;
-
-    grid.innerHTML = "";
-
-    if (!products.length) {
-        grid.innerHTML = "<p>Loading products...</p>";
-        return;
-    }
-
-    if (filteredProducts.length === 0) {
-        emptyState.style.display = "block";
-        countEl.textContent = "0 products found";
-        return;
-    } else {
-        emptyState.style.display = "none";
-    }
-
-    countEl.textContent = `${filteredProducts.length} product${filteredProducts.length > 1 ? "s" : ""} found`;
-
-    filteredProducts.forEach(product => {
-        const card = createProductCard(product);
-        grid.appendChild(card);
-    });
-}
-
-    /* ===== Create Product Card ===== */
-    function createProductCard(product) {
-        const card = document.createElement("div");
-        card.className = "product-card";
-
-        const link = document.createElement("a");
-        link.href = `product.html?id=${encodeURIComponent(product.id)}`;
-
-        const imageWrapper = document.createElement("div");
-        imageWrapper.className = "product-image";
-
-        const img = document.createElement("img");
-        img.src = product.image || "images/products/default.png";
-        img.alt = product.name;
-
-        imageWrapper.appendChild(img);
-
-        const info = document.createElement("div");
-        info.className = "product-info";
-
-        const name = document.createElement("div");
-        name.className = "product-name";
-        name.textContent = product.name;
-
-        const meta = document.createElement("div");
-        meta.className = "product-meta";
-        meta.textContent = buildMeta(product);
-
-        info.appendChild(name);
-        info.appendChild(meta);
-
-        link.appendChild(imageWrapper);
-        link.appendChild(info);
-
-        card.appendChild(link);
-
-        return card;
-    }
-
-    function buildMeta(product) {
-        let parts = [];
-
-        if (product.cas) parts.push(`CAS: ${product.cas}`);
-        if (product.mw) parts.push(`MW: ${product.mw}`);
-
-        return parts.join(" | ");
-    }
-
-    /* ===== Error Handling ===== */
-    function showError(message) {
-        const grid = document.getElementById("product-grid");
-        if (grid) {
-            grid.innerHTML = `<p>${message}</p>`;
-        }
-    }
-
-})();
+[
+  {
+    "id": "DM-0001",
+    "name": "Risidipalm impurity-1",
+    "cas": "17412-23-6",
+    "category": "Risidipalm",
+    "formula": "C8H8ClN3",
+    "mw": 181.62,
+    "purity": "<95%",
+    "grade": "in-house standard",
+    "synonyms": "Imidazo[1,2-b]pyridazine, 6-chloro-2,8-dimethyl",
+    "appearance": "yellow solid",
+    "storage": "2-8°C",
+    "application": "NA",
+    "description": "yellow color solid",
+    "availability": "In Stock",
+    "image": "images/products/default.png"
+  },
+  {
+    "id": "DM-0002",
+    "name": "Risidipalm impurity-2 Regio-isomer",
+    "cas": "17412-20-3",
+    "category": "Risidipalm",
+    "formula": "C8H8ClN3",
+    "mw": 181.62,
+    "purity": "<95%",
+    "grade": "in-house standard",
+    "synonyms": "6-Chloro-2,7-dimethylimidazo[1,2-b]pyridazine",
+    "appearance": "yellow solid",
+    "storage": "2-8°C",
+    "application": "NA",
+    "description": "yellow color solid",
+    "availability": "In Stock",
+    "image": "images/products/default.png"
+  },
+  {
+    "id": "DM-0003",
+    "name": "Abacavir N-nitroso",
+    "cas": "NA",
+    "category": "Abacavir",
+    "formula": "C14H17N7O2",
+    "mw": 315.3,
+    "purity": "<98%",
+    "grade": "in-house standard",
+    "synonyms": "N-(2-amino-9-((1R,4S)-4-(hydroxymethyl)cyclopent-2-en-1-yl)-9H-purin-6-yl)-N-cyclopropylnitrous amide",
+    "appearance": "Faint white to pale yellow solid",
+    "storage": "2-8°C",
+    "application": "NA",
+    "description": "Faint white solid",
+    "availability": "In Stock",
+    "image": "images/products/default.png"
+  },
+  {
+    "id": "DM-0004",
+    "name": "Nilotinib N-nitroso",
+    "cas": "2925306-68-7",
+    "category": "Nilotinib",
+    "formula": "C28H21F3N8O2",
+    "mw": 558.5,
+    "purity": "<98%",
+    "grade": "in-house standard",
+    "synonyms": "4-Methyl-N-(3-(4-methyl-1H-imidazol-1-yl)-5-(trifluoromethyl)phenyl)-3-(nitroso(4-(pyridin-3-yl)pyrimidin-2-yl)amino)benzamide",
+    "appearance": "yellow to orange solid",
+    "storage": "2-8°C",
+    "application": "",
+    "description": "yellow solid",
+    "availability": "In Stock",
+    "image": "images/products/default.png"
+  },
+  {
+    "id": "DM-0005",
+    "name": "Tenofovir impurity K",
+    "cas": "4121-40-8",
+    "category": "Tenofovir",
+    "formula": "C8H9N5",
+    "mw": 175.2,
+    "purity": "<95%",
+    "grade": "in-house standard",
+    "synonyms": "9-Propenyladenine",
+    "appearance": "white to off white solid",
+    "storage": "2-8°C",
+    "application": "",
+    "description": "off white solid",
+    "availability": "In Stock",
+    "image": "images/products/default.png"
+  },
+  {
+    "id": "DM-0006",
+    "name": "(Z)-9-Propenyl adenine",
+    "cas": "1464851-21-5",
+    "category": "Tenofovir",
+    "formula": "C8H9N6",
+    "mw": 175.2,
+    "purity": "<95%",
+    "grade": "in-house standard",
+    "synonyms": "(Z)-9-(prop-1-en-1-yl)-9H-purin-6-amine",
+    "appearance": "white to off white solid",
+    "storage": "2-8°C",
+    "application": "",
+    "description": "off white solid",
+    "availability": "In Stock",
+    "image": "images/products/default.png"
+  }
+]
