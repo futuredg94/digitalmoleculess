@@ -12,12 +12,10 @@
         a { text-decoration: none; color: inherit; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* TOP BAR */
         .top-bar { background: #0a1f2e; color: #cddbe9; padding: 6px 0; font-size: 0.8rem; }
         .top-bar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
         .top-bar .lang { display: flex; gap: 12px; align-items: center; }
 
-        /* HEADER */
         header { background: #fff; padding: 14px 0; border-bottom: 1px solid #e9edf2; position: sticky; top: 0; z-index: 100; }
         .navbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
         .logo { font-size: 1.5rem; font-weight: 800; color: #0f4c81; }
@@ -28,18 +26,17 @@
         .nav-links a.active { color: #0f4c81; border-bottom: 3px solid #0f4c81; padding-bottom: 4px; }
         .hamburger { display: none; font-size: 1.6rem; cursor: pointer; color: #0f4c81; }
 
-        /* ===== HERO ===== */
         .hero { background: linear-gradient(135deg, #eef4fa 0%, #d9e4f0 100%); padding: 80px 0 70px; text-align: center; }
         .hero h1 { font-size: 2.8rem; font-weight: 800; color: #0a2a44; max-width: 800px; margin: 0 auto 12px; line-height: 1.2; }
         .hero h1 span { color: #0f4c81; }
         .hero p { font-size: 1.2rem; color: #2d4059; max-width: 680px; margin: 0 auto 30px; }
         .hero .btn-group { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
         .btn-primary { display: inline-block; background: #0f4c81; color: #fff; padding: 14px 36px; border-radius: 40px; font-weight: 600; font-size: 1rem; border: none; cursor: pointer; transition: background 0.3s, transform 0.2s; box-shadow: 0 4px 12px rgba(15,76,129,0.3); }
         .btn-primary:hover { background: #0a3a62; transform: translateY(-2px); }
         .btn-secondary { display: inline-block; background: transparent; color: #0f4c81; padding: 12px 32px; border-radius: 40px; font-weight: 600; font-size: 1rem; border: 2px solid #0f4c81; cursor: pointer; transition: all 0.3s; }
         .btn-secondary:hover { background: #0f4c81; color: #fff; }
 
-        /* ===== ABOUT PREVIEW ===== */
         .about-preview { padding: 70px 0 60px; background: #fff; border-top: 1px solid #e9edf2; border-bottom: 1px solid #e9edf2; }
         .about-preview .about-header { text-align: center; max-width: 800px; margin: 0 auto; }
         .about-preview .about-badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: #0f4c81; text-transform: uppercase; letter-spacing: 2px; border-bottom: 3px solid #0f4c81; padding-bottom: 6px; margin-bottom: 12px; }
@@ -61,7 +58,6 @@
         .btn-about { display: inline-block; background: transparent; color: #0f4c81; padding: 10px 32px; border-radius: 40px; font-weight: 600; font-size: 0.95rem; border: 2px solid #0f4c81; transition: all 0.3s; cursor: pointer; margin-top: 30px; }
         .btn-about:hover { background: #0f4c81; color: #fff; }
 
-        /* ===== FEATURED PRODUCTS ===== */
         .featured-products { padding: 60px 0; background: #f5f7fa; }
         .featured-products h2 { font-size: 2rem; font-weight: 700; color: #0a2a44; text-align: center; margin-bottom: 40px; }
         .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
@@ -69,7 +65,8 @@
         .product-card { background: #fff; border-radius: 14px; border: 1px solid #e9edf2; padding: 20px; transition: all 0.3s; }
         .product-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.08); transform: translateY(-4px); }
 
-        .product-card .structure-image { width: 100%; height: 150px; background: #f0f4fa; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; border: 2px dashed #b0c4d8; }
+        .product-card .structure-image { width: 100%; height: 150px; background: #f0f4fa; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; border: 2px dashed #b0c4d8; overflow: hidden; }
+        .product-card .structure-image img { width: 100%; height: 100%; object-fit: contain; }
         .product-card .structure-image .placeholder-text { font-size: 0.85rem; color: #8aa0b8; text-align: center; }
         .product-card .structure-image .placeholder-text i { font-size: 2.8rem; display: block; margin-bottom: 6px; color: #b0c4d8; }
 
@@ -86,14 +83,12 @@
 
         .view-all { text-align: center; margin-top: 30px; }
 
-        /* ===== CTA SECTION ===== */
         .cta-section { background: linear-gradient(135deg, #0a2a44 0%, #0f4c81 100%); color: #fff; padding: 60px 0; text-align: center; }
         .cta-section h2 { font-size: 2rem; font-weight: 700; margin-bottom: 10px; }
         .cta-section p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 28px; }
         .cta-section .btn-primary { background: #fff; color: #0f4c81; box-shadow: none; }
         .cta-section .btn-primary:hover { background: #e9edf2; }
 
-        /* ===== CONTACT ===== */
         .contact-section { background: #fff; padding: 60px 0 50px; border-top: 1px solid #e9edf2; }
         .contact-section h2 { font-size: 2rem; font-weight: 700; color: #0a2a44; text-align: center; }
         .contact-section .contact-subtitle { text-align: center; color: #5a6f87; margin: 8px 0 40px; }
@@ -104,10 +99,8 @@
         .contact-item p { color: #5a6f87; font-size: 0.9rem; margin-top: 4px; }
         .contact-item a { color: #0f4c81; font-weight: 600; }
 
-        /* FOOTER */
         footer { background: #0a1f2e; color: #cddbe9; padding: 30px 0 20px; text-align: center; font-size: 0.85rem; opacity: 0.7; }
 
-        /* RESPONSIVE */
         @media (max-width: 992px) {
             .product-grid { grid-template-columns: repeat(2, 1fr); }
             .contact-grid { grid-template-columns: repeat(2, 1fr); }
@@ -159,25 +152,25 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#products">Products</a></li>
+                <li><a href="products.html">Products</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </header>
 
-    <!-- ===== HERO ===== -->
+    <!-- HERO -->
     <section class="hero">
         <div class="container">
             <h1>Pharmaceutical Impurity Standards <span>&amp;</span> Fine Chemicals</h1>
             <p>Digital Molecules is a trusted supplier of Pharmaceutical Impurity Standards and Fine Chemicals to support your research, development and quality control needs.</p>
             <div class="btn-group">
-                <a href="#products" class="btn-primary">Browse Products</a>
+                <a href="products.html" class="btn-primary">Browse Products</a>
                 <a href="#about" class="btn-secondary">Learn More</a>
             </div>
         </div>
     </section>
 
-    <!-- ===== ABOUT PREVIEW ===== -->
+    <!-- ABOUT PREVIEW -->
     <section class="about-preview" id="about">
         <div class="container">
             <div class="about-header">
@@ -239,23 +232,23 @@
         </div>
     </section>
 
-    <!-- ===== FEATURED PRODUCTS ===== -->
+    <!-- ===== FEATURED PRODUCTS (ALL 6) ===== -->
     <section class="featured-products" id="products">
         <div class="container">
             <h2>Featured Products</h2>
             <div class="product-grid">
 
+                <!-- Product 1: DM-0001 -->
                 <div class="product-card">
                     <div class="structure-image">
-                        <div class="placeholder-text">
-                            <i class="fas fa-image"></i>
-                            <span>DM-0001</span>
-                        </div>
+                        <img src="images/DM-0001.png" alt="Risidipalm Impurity-1" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-text\'><i class=\'fas fa-image\'></i><span>DM-0001</span></div>';" />
                     </div>
                     <div class="product-name">Risidipalm Impurity-1</div>
                     <div class="category-tag">Risidipalm</div>
                     <div class="product-details">
                         <span class="label">CAS No:</span><span class="value">17412-23-6</span>
+                        <span class="label">Mol. Formula:</span><span class="value">C₈H₈ClN₃</span>
+                        <span class="label">Mol. Wt.:</span><span class="value">181.62</span>
                         <span class="label">Status:</span><span class="value"><span class="in-stock">● In Stock</span></span>
                     </div>
                     <div style="margin-top:10px;">
@@ -264,17 +257,17 @@
                     </div>
                 </div>
 
+                <!-- Product 2: DM-0002 -->
                 <div class="product-card">
                     <div class="structure-image">
-                        <div class="placeholder-text">
-                            <i class="fas fa-image"></i>
-                            <span>DM-0002</span>
-                        </div>
+                        <img src="images/DM-0002.png" alt="Risidipalm Impurity-2" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-text\'><i class=\'fas fa-image\'></i><span>DM-0002</span></div>';" />
                     </div>
-                    <div class="product-name">Risidipalm Impurity-2</div>
+                    <div class="product-name">Risidipalm Impurity-2 (Regio-isomer)</div>
                     <div class="category-tag">Risidipalm</div>
                     <div class="product-details">
                         <span class="label">CAS No:</span><span class="value">17412-20-3</span>
+                        <span class="label">Mol. Formula:</span><span class="value">C₈H₈ClN₃</span>
+                        <span class="label">Mol. Wt.:</span><span class="value">181.62</span>
                         <span class="label">Status:</span><span class="value"><span class="in-stock">● In Stock</span></span>
                     </div>
                     <div style="margin-top:10px;">
@@ -283,17 +276,74 @@
                     </div>
                 </div>
 
+                <!-- Product 3: DM-0003 -->
                 <div class="product-card">
                     <div class="structure-image">
-                        <div class="placeholder-text">
-                            <i class="fas fa-image"></i>
-                            <span>DM-0003</span>
-                        </div>
+                        <img src="images/DM-0003.png" alt="Abacavir N-nitroso" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-text\'><i class=\'fas fa-image\'></i><span>DM-0003</span></div>';" />
                     </div>
                     <div class="product-name">Abacavir N-nitroso</div>
                     <div class="category-tag">Abacavir</div>
                     <div class="product-details">
                         <span class="label">CAS No:</span><span class="value">N/A</span>
+                        <span class="label">Mol. Formula:</span><span class="value">C₁₄H₁₇N₇O₂</span>
+                        <span class="label">Mol. Wt.:</span><span class="value">315.3</span>
+                        <span class="label">Status:</span><span class="value"><span class="in-stock">● In Stock</span></span>
+                    </div>
+                    <div style="margin-top:10px;">
+                        <a href="#" class="btn-sm-primary">View Details</a>
+                        <a href="#" class="btn-sm-outline">Quote</a>
+                    </div>
+                </div>
+
+                <!-- Product 4: DM-0004 -->
+                <div class="product-card">
+                    <div class="structure-image">
+                        <img src="images/DM-0004.png" alt="Nilotinib N-nitroso" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-text\'><i class=\'fas fa-image\'></i><span>DM-0004</span></div>';" />
+                    </div>
+                    <div class="product-name">Nilotinib N-nitroso</div>
+                    <div class="category-tag">Nilotinib</div>
+                    <div class="product-details">
+                        <span class="label">CAS No:</span><span class="value">2925306-68-7</span>
+                        <span class="label">Mol. Formula:</span><span class="value">C₂₈H₂₁F₃N₈O₂</span>
+                        <span class="label">Mol. Wt.:</span><span class="value">558.5</span>
+                        <span class="label">Status:</span><span class="value"><span class="in-stock">● In Stock</span></span>
+                    </div>
+                    <div style="margin-top:10px;">
+                        <a href="#" class="btn-sm-primary">View Details</a>
+                        <a href="#" class="btn-sm-outline">Quote</a>
+                    </div>
+                </div>
+
+                <!-- Product 5: DM-0005 -->
+                <div class="product-card">
+                    <div class="structure-image">
+                        <img src="images/DM-0005.png" alt="Tenofovir Impurity K" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-text\'><i class=\'fas fa-image\'></i><span>DM-0005</span></div>';" />
+                    </div>
+                    <div class="product-name">Tenofovir Impurity K</div>
+                    <div class="category-tag">Tenofovir</div>
+                    <div class="product-details">
+                        <span class="label">CAS No:</span><span class="value">4121-40-8</span>
+                        <span class="label">Mol. Formula:</span><span class="value">C₈H₉N₅</span>
+                        <span class="label">Mol. Wt.:</span><span class="value">175.2</span>
+                        <span class="label">Status:</span><span class="value"><span class="in-stock">● In Stock</span></span>
+                    </div>
+                    <div style="margin-top:10px;">
+                        <a href="#" class="btn-sm-primary">View Details</a>
+                        <a href="#" class="btn-sm-outline">Quote</a>
+                    </div>
+                </div>
+
+                <!-- Product 6: DM-0006 -->
+                <div class="product-card">
+                    <div class="structure-image">
+                        <img src="images/DM-0006.png" alt="(Z)-9-Propenyl Adenine" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-text\'><i class=\'fas fa-image\'></i><span>DM-0006</span></div>';" />
+                    </div>
+                    <div class="product-name">(Z)-9-Propenyl Adenine</div>
+                    <div class="category-tag">Tenofovir</div>
+                    <div class="product-details">
+                        <span class="label">CAS No:</span><span class="value">1464851-21-5</span>
+                        <span class="label">Mol. Formula:</span><span class="value">C₈H₉N₅</span>
+                        <span class="label">Mol. Wt.:</span><span class="value">175.2</span>
                         <span class="label">Status:</span><span class="value"><span class="in-stock">● In Stock</span></span>
                     </div>
                     <div style="margin-top:10px;">
@@ -304,12 +354,12 @@
 
             </div>
             <div class="view-all">
-                <a href="#" class="btn-primary">View All Products →</a>
+                <a href="products.html" class="btn-primary">View All Products →</a>
             </div>
         </div>
     </section>
 
-    <!-- ===== CTA SECTION ===== -->
+    <!-- CTA SECTION -->
     <section class="cta-section">
         <div class="container">
             <h2>Have a Question or Need a Quote?</h2>
@@ -318,7 +368,7 @@
         </div>
     </section>
 
-    <!-- ===== CONTACT ===== -->
+    <!-- CONTACT -->
     <section class="contact-section" id="contact">
         <div class="container">
             <h2>Get in Touch</h2>
