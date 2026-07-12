@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact - Digital Molecules</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ===== HEADER / NAVIGATION ===== -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>Digital Molecules</h1>
+                <span>Impurity Standards &amp; Fine Chemicals</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">&#9776;</div>
+        </div>
+    </header>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact-page">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Have questions about our products or services? Reach out to us!</p>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <form action="mailto:purchase@digitalmoleculess.com" method="POST" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <span class="icon">&#9993;</span>
+                        <div>
+                            <strong>Email</strong>
+                            <p><a href="mailto:purchase@digitalmoleculess.com">purchase@digitalmoleculess.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">&#9742;</span>
+                        <div>
+                            <strong>Phone</strong>
+                            <p><a href="tel:+918919727242">+91 8919727242</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">&#128205;</span>
+                        <div>
+                            <strong>Location</strong>
+                            <p>India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">&#128338;</span>
+                        <div>
+                            <strong>Business Hours</strong>
+                            <p>Mon - Sat: 9:00 AM - 6:00 PM (IST)</p>
+                        </div>
+                    </div>
+
+                    <div class="quick-inquiry">
+                        <h4>Quick Inquiry</h4>
+                        <p>For product inquiries, email us with the catalog number and we'll get back to you within 24 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>Digital Molecules</h4>
+                    <p>Impurity Standards &amp; Fine Chemicals</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">About</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p>Email: purchase@digitalmoleculess.com</p>
+                    <p>Phone: +91 8919727242</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Digital Molecules. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
