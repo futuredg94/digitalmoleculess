@@ -43,7 +43,7 @@
         .product-card { background: #fff; border-radius: 14px; border: 1px solid #e9edf2; padding: 20px; transition: all 0.3s; }
         .product-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.08); transform: translateY(-4px); }
 
-        .product-card .structure-image { width: 100%; height: 170px; background: #f0f4fa; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; border: 2px dashed #b0c4d8; overflow: hidden; }
+        .product-card .structure-image { width: 100%; height: 170px; background: #ffffff; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; border: 1px solid #e9edf2; overflow: hidden; padding: 10px; }
         .product-card .structure-image img { width: 100%; height: 100%; object-fit: contain; }
         .product-card .structure-image .placeholder-text { font-size: 0.85rem; color: #8aa0b8; text-align: center; }
         .product-card .structure-image .placeholder-text i { font-size: 2.8rem; display: block; margin-bottom: 6px; color: #b0c4d8; }
@@ -202,7 +202,7 @@
         </div>
     </div>
 
-    <!-- ===== PRODUCTS SECTION WITH SMILES ===== -->
+    <!-- ===== PRODUCTS SECTION ===== -->
     <section class="products-section">
         <div class="container">
             <div class="product-grid">
@@ -210,19 +210,28 @@
                 <!-- ===== PRODUCT 1: DM-0001 ===== -->
                 <div class="product-card">
                     <div class="structure-image">
-                        <img src="https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/Cc1cc(C)c2nc(C)nn12/PNG" 
+                        <img src="https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/C12=NC(C)=CN1N=C(Cl)C=C2C/PNG" 
                              alt="Risidipalm Impurity-1" 
-                             style="width:100%; height:100%; object-fit:contain;" />
+                             style="width:100%; height:100%; object-fit:contain;" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-text\'><i class=\'fas fa-flask\'></i><span>DM-0001</span></div>';" />
                     </div>
                     <div class="product-name">Risidipalm Impurity-1</div>
                     <div class="category-tag">Risidipalm</div>
                     <div class="product-details">
-                        <span class="label">CAT No:</span><span class="value">DM-0001</span>
-                        <span class="label">CAS No:</span><span class="value">17412-23-6</span>
-                        <span class="label">Mol. Formula:</span><span class="value">C₈H₈ClN₃</span>
-                        <span class="label">Mol. Wt.:</span><span class="value">181.62</span>
-                        <span class="label">SMILES:</span><span class="value" style="font-size:0.7rem; font-family:monospace; word-break:break-all;">Cc1cc(C)c2nc(C)nn12</span>
-                        <span class="label">Status:</span><span class="value"><span class="in-stock">● In Stock</span></span>
+                        <span class="label">DM CAT No:</span>
+                        <span class="value">DM-0001</span>
+                        <span class="label">CAS No:</span>
+                        <span class="value">17412-23-6</span>
+                        <span class="label">Mol.F.:</span>
+                        <span class="value">C₈H₈ClN₃</span>
+                        <span class="label">Mol.Wt.:</span>
+                        <span class="value">181.62</span>
+                        <span class="label" style="grid-column: span 2; font-weight:600; color:#0f4c81; margin-top:4px;">SMILES:</span>
+                        <span class="value" style="grid-column: span 2; font-family:'Courier New', monospace; font-size:0.65rem; word-break:break-all; background:#f0f4fa; padding:4px 8px; border-radius:4px;">
+                            C12=NC(C)=CN1N=C(Cl)C=C2C
+                        </span>
+                        <span class="label">Inv. Status:</span>
+                        <span class="value"><span class="in-stock">● In Stock</span></span>
                     </div>
                     <div class="btn-group">
                         <a href="#" class="btn-sm-primary">View Details</a>
@@ -234,19 +243,28 @@
                 <!-- ===== PRODUCT 2: DM-0002 ===== -->
                 <div class="product-card">
                     <div class="structure-image">
-                        <img src="https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/Cc1cc(C)c2nc(C)nn12/PNG" 
+                        <img src="https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/CC1=CN2N=C(Cl)C(C)=CC2=N1/PNG" 
                              alt="Risidipalm Impurity-2" 
-                             style="width:100%; height:100%; object-fit:contain;" />
+                             style="width:100%; height:100%; object-fit:contain;" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-text\'><i class=\'fas fa-flask\'></i><span>DM-0002</span></div>';" />
                     </div>
                     <div class="product-name">Risidipalm Impurity-2 (Regio-isomer)</div>
                     <div class="category-tag">Risidipalm</div>
                     <div class="product-details">
-                        <span class="label">CAT No:</span><span class="value">DM-0002</span>
-                        <span class="label">CAS No:</span><span class="value">17412-20-3</span>
-                        <span class="label">Mol. Formula:</span><span class="value">C₈H₈ClN₃</span>
-                        <span class="label">Mol. Wt.:</span><span class="value">181.62</span>
-                        <span class="label">SMILES:</span><span class="value" style="font-size:0.7rem; font-family:monospace; word-break:break-all;">Cc1cc(C)c2nc(C)nn12</span>
-                        <span class="label">Status:</span><span class="value"><span class="in-stock">● In Stock</span></span>
+                        <span class="label">DM CAT No:</span>
+                        <span class="value">DM-0002</span>
+                        <span class="label">CAS No:</span>
+                        <span class="value">17412-20-3</span>
+                        <span class="label">Mol.F.:</span>
+                        <span class="value">C₈H₈ClN₃</span>
+                        <span class="label">Mol.Wt.:</span>
+                        <span class="value">181.62</span>
+                        <span class="label" style="grid-column: span 2; font-weight:600; color:#0f4c81; margin-top:4px;">SMILES:</span>
+                        <span class="value" style="grid-column: span 2; font-family:'Courier New', monospace; font-size:0.65rem; word-break:break-all; background:#f0f4fa; padding:4px 8px; border-radius:4px;">
+                            CC1=CN2N=C(Cl)C(C)=CC2=N1
+                        </span>
+                        <span class="label">Inv. Status:</span>
+                        <span class="value"><span class="in-stock">● In Stock</span></span>
                     </div>
                     <div class="btn-group">
                         <a href="#" class="btn-sm-primary">View Details</a>
@@ -258,19 +276,28 @@
                 <!-- ===== PRODUCT 3: DM-0003 ===== -->
                 <div class="product-card">
                     <div class="structure-image">
-                        <img src="https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/NC1=NC=NC2=C1N=CN2/PNG" 
+                        <img src="https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/O=NN(C1CC1)C2=C3C(N([C@@H]4C=C[C@H](CO)C4)C=N3)=NC(N)=N2/PNG" 
                              alt="Abacavir N-nitroso" 
-                             style="width:100%; height:100%; object-fit:contain;" />
+                             style="width:100%; height:100%; object-fit:contain;" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-text\'><i class=\'fas fa-flask\'></i><span>DM-0003</span></div>';" />
                     </div>
                     <div class="product-name">Abacavir N-nitroso</div>
                     <div class="category-tag">Abacavir</div>
                     <div class="product-details">
-                        <span class="label">CAT No:</span><span class="value">DM-0003</span>
-                        <span class="label">CAS No:</span><span class="value">N/A</span>
-                        <span class="label">Mol. Formula:</span><span class="value">C₁₄H₁₇N₇O₂</span>
-                        <span class="label">Mol. Wt.:</span><span class="value">315.3</span>
-                        <span class="label">SMILES:</span><span class="value" style="font-size:0.7rem; font-family:monospace; word-break:break-all;">NC1=NC=NC2=C1N=CN2</span>
-                        <span class="label">Status:</span><span class="value"><span class="in-stock">● In Stock</span></span>
+                        <span class="label">DM CAT No:</span>
+                        <span class="value">DM-0003</span>
+                        <span class="label">CAS No:</span>
+                        <span class="value">N/A</span>
+                        <span class="label">Mol.F.:</span>
+                        <span class="value">C₁₄H₁₇N₇O₂</span>
+                        <span class="label">Mol.Wt.:</span>
+                        <span class="value">315.3</span>
+                        <span class="label" style="grid-column: span 2; font-weight:600; color:#0f4c81; margin-top:4px;">SMILES:</span>
+                        <span class="value" style="grid-column: span 2; font-family:'Courier New', monospace; font-size:0.65rem; word-break:break-all; background:#f0f4fa; padding:4px 8px; border-radius:4px;">
+                            O=NN(C1CC1)C2=C3C(N([C@@H]4C=C[C@H](CO)C4)C=N3)=NC(N)=N2
+                        </span>
+                        <span class="label">Inv. Status:</span>
+                        <span class="value"><span class="in-stock">● In Stock</span></span>
                     </div>
                     <div class="btn-group">
                         <a href="#" class="btn-sm-primary">View Details</a>
@@ -282,19 +309,28 @@
                 <!-- ===== PRODUCT 4: DM-0004 ===== -->
                 <div class="product-card">
                     <div class="structure-image">
-                        <img src="https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/CN1C(=O)C2=C(N=C(N2)C3=CC=CC=C3)C4=CC=CC=C4C1=O/PNG" 
+                        <img src="https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/O=C(C1=CC(N(N=O)C2=NC(C3=CN=CC=C3)=CC=N2)=C(C)C=C1)NC4=CC(C(F)(F)F)=CC(N5C=NC(C)=C5)=C4/PNG" 
                              alt="Nilotinib N-nitroso" 
-                             style="width:100%; height:100%; object-fit:contain;" />
+                             style="width:100%; height:100%; object-fit:contain;" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-text\'><i class=\'fas fa-flask\'></i><span>DM-0004</span></div>';" />
                     </div>
                     <div class="product-name">Nilotinib N-nitroso</div>
                     <div class="category-tag">Nilotinib</div>
                     <div class="product-details">
-                        <span class="label">CAT No:</span><span class="value">DM-0004</span>
-                        <span class="label">CAS No:</span><span class="value">2925306-68-7</span>
-                        <span class="label">Mol. Formula:</span><span class="value">C₂₈H₂₁F₃N₈O₂</span>
-                        <span class="label">Mol. Wt.:</span><span class="value">558.5</span>
-                        <span class="label">SMILES:</span><span class="value" style="font-size:0.7rem; font-family:monospace; word-break:break-all;">CN1C(=O)C2=C(N=C(N2)C3=CC=CC=C3)C4=CC=CC=C4C1=O</span>
-                        <span class="label">Status:</span><span class="value"><span class="in-stock">● In Stock</span></span>
+                        <span class="label">DM CAT No:</span>
+                        <span class="value">DM-0004</span>
+                        <span class="label">CAS No:</span>
+                        <span class="value">2925306-68-7</span>
+                        <span class="label">Mol.F.:</span>
+                        <span class="value">C₂₈H₂₁F₃N₈O₂</span>
+                        <span class="label">Mol.Wt.:</span>
+                        <span class="value">558.5</span>
+                        <span class="label" style="grid-column: span 2; font-weight:600; color:#0f4c81; margin-top:4px;">SMILES:</span>
+                        <span class="value" style="grid-column: span 2; font-family:'Courier New', monospace; font-size:0.65rem; word-break:break-all; background:#f0f4fa; padding:4px 8px; border-radius:4px;">
+                            O=C(C1=CC(N(N=O)C2=NC(C3=CN=CC=C3)=CC=N2)=C(C)C=C1)NC4=CC(C(F)(F)F)=CC(N5C=NC(C)=C5)=C4
+                        </span>
+                        <span class="label">Inv. Status:</span>
+                        <span class="value"><span class="in-stock">● In Stock</span></span>
                     </div>
                     <div class="btn-group">
                         <a href="#" class="btn-sm-primary">View Details</a>
@@ -306,19 +342,28 @@
                 <!-- ===== PRODUCT 5: DM-0005 ===== -->
                 <div class="product-card">
                     <div class="structure-image">
-                        <img src="https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/NC1=NC=NC2=C1N=CN2/PNG" 
+                        <img src="https://cactus.nci.nih.gov/chemical/structure/NC1%3DC2N%3DCN(/C%3DC/C)C2%3DNC%3DN1/image" 
                              alt="Tenofovir Impurity K" 
-                             style="width:100%; height:100%; object-fit:contain;" />
+                             style="width:100%; height:100%; object-fit:contain;" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-text\'><i class=\'fas fa-flask\'></i><span>DM-0005</span></div>';" />
                     </div>
                     <div class="product-name">Tenofovir Impurity K</div>
                     <div class="category-tag">Tenofovir</div>
                     <div class="product-details">
-                        <span class="label">CAT No:</span><span class="value">DM-0005</span>
-                        <span class="label">CAS No:</span><span class="value">4121-40-8</span>
-                        <span class="label">Mol. Formula:</span><span class="value">C₈H₉N₅</span>
-                        <span class="label">Mol. Wt.:</span><span class="value">175.2</span>
-                        <span class="label">SMILES:</span><span class="value" style="font-size:0.7rem; font-family:monospace; word-break:break-all;">NC1=NC=NC2=C1N=CN2</span>
-                        <span class="label">Status:</span><span class="value"><span class="in-stock">● In Stock</span></span>
+                        <span class="label">DM CAT No:</span>
+                        <span class="value">DM-0005</span>
+                        <span class="label">CAS No:</span>
+                        <span class="value">4121-40-8</span>
+                        <span class="label">Mol.F.:</span>
+                        <span class="value">C₈H₉N₅</span>
+                        <span class="label">Mol.Wt.:</span>
+                        <span class="value">175.2</span>
+                        <span class="label" style="grid-column: span 2; font-weight:600; color:#0f4c81; margin-top:4px;">SMILES:</span>
+                        <span class="value" style="grid-column: span 2; font-family:'Courier New', monospace; font-size:0.65rem; word-break:break-all; background:#f0f4fa; padding:4px 8px; border-radius:4px;">
+                            NC1=C2N=CN(/C=C/C)C2=NC=N1
+                        </span>
+                        <span class="label">Inv. Status:</span>
+                        <span class="value"><span class="in-stock">● In Stock</span></span>
                     </div>
                     <div class="btn-group">
                         <a href="#" class="btn-sm-primary">View Details</a>
@@ -330,19 +375,28 @@
                 <!-- ===== PRODUCT 6: DM-0006 ===== -->
                 <div class="product-card">
                     <div class="structure-image">
-                        <img src="https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/NC1=NC=NC2=C1N=CN2C=C/PNG" 
+                        <img src="https://cactus.nci.nih.gov/chemical/structure/NC1%3DC2N%3DCN(/C%3DC/C)C2%3DNC%3DN1/image" 
                              alt="(Z)-9-Propenyl Adenine" 
-                             style="width:100%; height:100%; object-fit:contain;" />
+                             style="width:100%; height:100%; object-fit:contain;" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-text\'><i class=\'fas fa-flask\'></i><span>DM-0006</span></div>';" />
                     </div>
                     <div class="product-name">(Z)-9-Propenyl Adenine</div>
                     <div class="category-tag">Tenofovir</div>
                     <div class="product-details">
-                        <span class="label">CAT No:</span><span class="value">DM-0006</span>
-                        <span class="label">CAS No:</span><span class="value">1464851-21-5</span>
-                        <span class="label">Mol. Formula:</span><span class="value">C₈H₉N₅</span>
-                        <span class="label">Mol. Wt.:</span><span class="value">175.2</span>
-                        <span class="label">SMILES:</span><span class="value" style="font-size:0.7rem; font-family:monospace; word-break:break-all;">NC1=NC=NC2=C1N=CN2C=C</span>
-                        <span class="label">Status:</span><span class="value"><span class="in-stock">● In Stock</span></span>
+                        <span class="label">DM CAT No:</span>
+                        <span class="value">DM-0006</span>
+                        <span class="label">CAS No:</span>
+                        <span class="value">1464851-21-5</span>
+                        <span class="label">Mol.F.:</span>
+                        <span class="value">C₈H₉N₅</span>
+                        <span class="label">Mol.Wt.:</span>
+                        <span class="value">175.2</span>
+                        <span class="label" style="grid-column: span 2; font-weight:600; color:#0f4c81; margin-top:4px;">SMILES:</span>
+                        <span class="value" style="grid-column: span 2; font-family:'Courier New', monospace; font-size:0.65rem; word-break:break-all; background:#f0f4fa; padding:4px 8px; border-radius:4px;">
+                            NC1=C2N=CN(/C=C/C)C2=NC=N1
+                        </span>
+                        <span class="label">Inv. Status:</span>
+                        <span class="value"><span class="in-stock">● In Stock</span></span>
                     </div>
                     <div class="btn-group">
                         <a href="#" class="btn-sm-primary">View Details</a>
