@@ -3,868 +3,186 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Pharmaceutical Impurity Standards | Digital Molecules</title>
-
-    <!-- Google Fonts -->
+    <title>Products | Digital Molecules</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet"/>
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
     <style>
-        /* ===== RESET & BASE ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #1a1a2e;
-            background: #f5f7fa;
-            line-height: 1.6;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        ul {
-            list-style: none;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f5f7fa; color: #1a1a2e; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* ===== TOP BAR ===== */
-        .top-bar {
-            background: #0a1f2e;
-            color: #cddbe9;
-            padding: 6px 0;
-            font-size: 0.8rem;
-        }
-        .top-bar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .top-bar .lang {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-        .top-bar .lang span {
-            cursor: pointer;
-        }
-        .top-bar .lang span:hover {
-            color: #fff;
-        }
+        /* Top Bar */
+        .top-bar { background: #0a1f2e; color: #cddbe9; padding: 6px 0; font-size: 0.8rem; }
+        .top-bar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .top-bar .lang { display: flex; gap: 12px; align-items: center; }
 
-        /* ===== HEADER ===== */
-        header {
-            background: #ffffff;
-            padding: 14px 0;
-            border-bottom: 1px solid #e9edf2;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .navbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: #0f4c81;
-        }
-        .logo span {
-            color: #2d9cdb;
-        }
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-        .nav-links a {
-            color: #1a1a2e;
-            transition: color 0.3s;
-        }
-        .nav-links a:hover {
-            color: #0f4c81;
-        }
-        .nav-links a.active {
-            color: #0f4c81;
-            border-bottom: 3px solid #0f4c81;
-            padding-bottom: 4px;
-        }
-        .hamburger {
-            display: none;
-            font-size: 1.6rem;
-            cursor: pointer;
-            color: #0f4c81;
-        }
+        /* Header */
+        header { background: #fff; padding: 14px 0; border-bottom: 1px solid #e9edf2; position: sticky; top: 0; z-index: 100; }
+        .navbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: #0f4c81; }
+        .logo span { color: #2d9cdb; }
+        .nav-links { display: flex; gap: 28px; font-weight: 600; font-size: 0.9rem; }
+        .nav-links a { color: #1a1a2e; transition: color 0.3s; }
+        .nav-links a:hover { color: #0f4c81; }
+        .nav-links a.active { color: #0f4c81; border-bottom: 3px solid #0f4c81; padding-bottom: 4px; }
+        .hamburger { display: none; font-size: 1.6rem; cursor: pointer; color: #0f4c81; }
 
-        /* ===== BREADCRUMB ===== */
-        .breadcrumb {
-            background: #ffffff;
-            padding: 14px 0;
-            border-bottom: 1px solid #e9edf2;
-            font-size: 0.85rem;
-            color: #5a6f87;
-        }
-        .breadcrumb a {
-            color: #0f4c81;
-            font-weight: 600;
-        }
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-        .breadcrumb span {
-            color: #1a1a2e;
-        }
+        /* Breadcrumb */
+        .breadcrumb { background: #fff; padding: 14px 0; border-bottom: 1px solid #e9edf2; font-size: 0.85rem; color: #5a6f87; }
+        .breadcrumb a { color: #0f4c81; font-weight: 600; }
 
-        /* ===== PAGE HEADER ===== */
-        .page-header {
-            padding: 30px 0 10px;
-            background: #ffffff;
-        }
-        .page-header h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #0a2a44;
-        }
-        .page-header p {
-            color: #5a6f87;
-            margin-top: 4px;
-        }
+        /* Page Header */
+        .page-header { padding: 30px 0 10px; background: #fff; }
+        .page-header h1 { font-size: 2rem; font-weight: 700; color: #0a2a44; }
+        .page-header p { color: #5a6f87; margin-top: 4px; }
 
-        /* ===== FILTER BAR ===== */
-        .filter-bar {
-            background: #ffffff;
-            padding: 16px 0;
-            border-bottom: 1px solid #e9edf2;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .filter-bar .filter-group {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-        .filter-bar select {
-            padding: 8px 16px;
-            border-radius: 8px;
-            border: 1px solid #dce3ec;
-            background: #fff;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.85rem;
-            color: #1a1a2e;
-            cursor: pointer;
-        }
-        .filter-bar .results-count {
-            font-size: 0.9rem;
-            color: #5a6f87;
-        }
+        /* Filter Bar */
+        .filter-bar { background: #fff; padding: 16px 0; border-bottom: 1px solid #e9edf2; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; }
+        .filter-bar select { padding: 8px 16px; border-radius: 8px; border: 1px solid #dce3ec; font-family: 'Inter', sans-serif; font-size: 0.85rem; background: #fff; cursor: pointer; }
+        .filter-bar .results-count { font-size: 0.9rem; color: #5a6f87; }
 
-        /* ===== PRODUCT GRID ===== */
-        .products-section {
-            padding: 30px 0 60px;
-        }
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+        /* Products */
+        .products-section { padding: 30px 0 60px; }
+        .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
 
-        /* ===== PRODUCT CARD ===== */
-        .product-card {
-            background: #ffffff;
-            border-radius: 14px;
-            border: 1px solid #e9edf2;
-            overflow: hidden;
-            transition: box-shadow 0.3s, transform 0.2s;
-            padding: 20px 20px 22px;
-        }
-        .product-card:hover {
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-            transform: translateY(-4px);
-        }
+        .product-card { background: #fff; border-radius: 14px; border: 1px solid #e9edf2; padding: 20px; transition: all 0.3s; }
+        .product-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.08); transform: translateY(-4px); }
 
-        .product-card .structure-image {
-            width: 100%;
-            height: 170px;
-            background: #f0f4fa;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 14px;
-            border: 2px dashed #b0c4d8;
-            padding: 12px;
-            position: relative;
-            overflow: hidden;
-            transition: border-color 0.3s ease;
-        }
-        .product-card:hover .structure-image {
-            border-color: #0f4c81;
-        }
-        .product-card .structure-image img {
-            width: 100%;
-            height: 100%;
-            max-width: 220px;
-            max-height: 140px;
-            object-fit: contain;
-            background: #ffffff;
-            display: block;
-        }
-        .product-card .structure-image .placeholder-text {
-            font-size: 0.85rem;
-            color: #8aa0b8;
-            text-align: center;
-        }
-        .product-card .structure-image .placeholder-text i {
-            font-size: 2.8rem;
-            display: block;
-            margin-bottom: 6px;
-            color: #b0c4d8;
-        }
+        .product-card .structure-image { width: 100%; height: 170px; background: #f0f4fa; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; border: 2px dashed #b0c4d8; transition: border-color 0.3s; }
+        .product-card:hover .structure-image { border-color: #0f4c81; }
+        .product-card .structure-image .placeholder-text { font-size: 0.85rem; color: #8aa0b8; text-align: center; }
+        .product-card .structure-image .placeholder-text i { font-size: 2.8rem; display: block; margin-bottom: 6px; color: #b0c4d8; }
 
-        .product-card .product-name {
-            font-weight: 700;
-            font-size: 1rem;
-            color: #0a2a44;
-            margin-bottom: 2px;
-        }
-        .product-card .category-tag {
-            font-size: 0.75rem;
-            color: #0f4c81;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-        }
-        .product-card .product-details {
-            margin-top: 10px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4px 12px;
-            font-size: 0.85rem;
-        }
-        .product-card .product-details .label {
-            color: #5a6f87;
-        }
-        .product-card .product-details .value {
-            color: #1a1a2e;
-            font-weight: 500;
-        }
-        .product-card .product-details .value .in-stock {
-            color: #27ae60;
-            font-weight: 700;
-        }
+        .product-card .product-name { font-weight: 700; font-size: 1rem; color: #0a2a44; }
+        .product-card .category-tag { font-size: 0.75rem; color: #0f4c81; font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px; }
+        .product-card .product-details { margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 12px; font-size: 0.85rem; }
+        .product-card .product-details .label { color: #5a6f87; }
+        .product-card .product-details .value { color: #1a1a2e; font-weight: 500; }
+        .product-card .product-details .value .in-stock { color: #27ae60; font-weight: 700; }
 
-        .product-card .btn-group {
-            display: flex;
-            gap: 10px;
-            margin-top: 16px;
-            flex-wrap: wrap;
-        }
-        .product-card .btn-sm-primary {
-            display: inline-block;
-            background: #0f4c81;
-            color: #fff;
-            padding: 8px 18px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 0.8rem;
-            border: none;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        .product-card .btn-sm-primary:hover {
-            background: #0a3a62;
-        }
-        .product-card .btn-sm-outline {
-            display: inline-block;
-            background: transparent;
-            color: #0f4c81;
-            padding: 7px 16px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 0.8rem;
-            border: 1.5px solid #0f4c81;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .product-card .btn-sm-outline:hover {
-            background: #0f4c81;
-            color: #fff;
-        }
-        .product-card .btn-sm-ghost {
-            display: inline-block;
-            background: transparent;
-            color: #5a6f87;
-            padding: 7px 16px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 0.8rem;
-            border: 1.5px solid #dce3ec;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .product-card .btn-sm-ghost:hover {
-            border-color: #0f4c81;
-            color: #0f4c81;
-        }
-        .product-card .favorite-icon {
-            float: right;
-            color: #b0c4d8;
-            cursor: pointer;
-            transition: color 0.3s;
-            font-size: 1.1rem;
-        }
-        .product-card .favorite-icon:hover {
-            color: #e74c3c;
-        }
+        .product-card .btn-group { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+        .product-card .btn-sm-primary { background: #0f4c81; color: #fff; padding: 8px 18px; border-radius: 30px; font-weight: 600; font-size: 0.8rem; border: none; cursor: pointer; transition: background 0.3s; }
+        .product-card .btn-sm-primary:hover { background: #0a3a62; }
+        .product-card .btn-sm-outline { background: transparent; color: #0f4c81; padding: 7px 16px; border-radius: 30px; font-weight: 600; font-size: 0.8rem; border: 1.5px solid #0f4c81; cursor: pointer; transition: all 0.3s; }
+        .product-card .btn-sm-outline:hover { background: #0f4c81; color: #fff; }
+        .product-card .btn-sm-ghost { background: transparent; color: #5a6f87; padding: 7px 16px; border-radius: 30px; font-weight: 600; font-size: 0.8rem; border: 1.5px solid #dce3ec; cursor: pointer; transition: all 0.3s; }
+        .product-card .btn-sm-ghost:hover { border-color: #0f4c81; color: #0f4c81; }
+        .product-card .favorite-icon { float: right; color: #b0c4d8; cursor: pointer; font-size: 1.1rem; }
+        .product-card .favorite-icon:hover { color: #e74c3c; }
 
-        /* ===== PAGINATION ===== */
-        .pagination {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 40px;
-        }
-        .pagination a {
-            display: inline-block;
-            padding: 8px 16px;
-            border-radius: 8px;
-            border: 1px solid #dce3ec;
-            color: #1a1a2e;
-            font-weight: 600;
-            font-size: 0.85rem;
-            transition: all 0.3s;
-        }
-        .pagination a:hover,
-        .pagination a.active {
-            background: #0f4c81;
-            color: #fff;
-            border-color: #0f4c81;
-        }
+        /* Pagination */
+        .pagination { display: flex; justify-content: center; gap: 8px; margin-top: 40px; }
+        .pagination a { display: inline-block; padding: 8px 16px; border-radius: 8px; border: 1px solid #dce3ec; font-weight: 600; font-size: 0.85rem; transition: all 0.3s; }
+        .pagination a:hover, .pagination a.active { background: #0f4c81; color: #fff; border-color: #0f4c81; }
 
-        /* ============================================================ */
-        /* ===== ABOUT SECTION ===== */
-        /* ============================================================ */
+        /* About */
+        .about-section { padding: 70px 0 60px; background: #fff; border-top: 1px solid #e9edf2; border-bottom: 1px solid #e9edf2; }
+        .about-header { text-align: center; max-width: 800px; margin: 0 auto 50px; }
+        .about-header .about-badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: #0f4c81; text-transform: uppercase; letter-spacing: 2px; border-bottom: 3px solid #0f4c81; padding-bottom: 6px; margin-bottom: 12px; }
+        .about-header h2 { font-size: 2.4rem; font-weight: 800; color: #0a2a44; line-height: 1.2; margin-bottom: 16px; }
+        .about-header .about-subtitle { font-size: 1.05rem; color: #4a5b72; max-width: 700px; margin: 0 auto; line-height: 1.7; }
 
-        .about-section {
-            padding: 70px 0 60px;
-            background: #ffffff;
-            border-top: 1px solid #e9edf2;
-            border-bottom: 1px solid #e9edf2;
-        }
-        .about-header {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 50px;
-        }
-        .about-header .about-badge {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: #0f4c81;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-bottom: 3px solid #0f4c81;
-            padding-bottom: 6px;
-            margin-bottom: 12px;
-        }
-        .about-header h2 {
-            font-size: 2.4rem;
-            font-weight: 800;
-            color: #0a2a44;
-            line-height: 1.2;
-            margin-bottom: 16px;
-        }
-        .about-header .about-subtitle {
-            font-size: 1.05rem;
-            color: #4a5b72;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.7;
-        }
+        .about-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 50px; }
+        .stat-box { background: #f8fafc; padding: 24px 16px; border-radius: 12px; text-align: center; border: 1px solid #e9edf2; transition: all 0.3s; }
+        .stat-box:hover { transform: translateY(-6px); box-shadow: 0 8px 25px rgba(15,76,129,0.08); }
+        .stat-box .stat-number { display: block; font-size: 2.2rem; font-weight: 800; color: #0f4c81; }
+        .stat-box .stat-label { font-size: 0.9rem; color: #5a6f87; }
 
-        .about-stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-bottom: 50px;
-        }
-        .stat-box {
-            background: #f8fafc;
-            padding: 24px 16px;
-            border-radius: 12px;
-            text-align: center;
-            border: 1px solid #e9edf2;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .stat-box:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 8px 25px rgba(15, 76, 129, 0.08);
-        }
-        .stat-box .stat-number {
-            display: block;
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: #0f4c81;
-        }
-        .stat-box .stat-label {
-            font-size: 0.9rem;
-            color: #5a6f87;
-        }
+        .about-values { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; margin-bottom: 50px; }
+        .value-card { background: #fff; padding: 28px 20px; border-radius: 12px; text-align: center; border: 1px solid #e9edf2; transition: all 0.3s; }
+        .value-card:hover { transform: translateY(-6px); box-shadow: 0 8px 25px rgba(15,76,129,0.08); }
+        .value-card .value-icon { width: 60px; height: 60px; background: #eef4fa; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; font-size: 1.6rem; color: #0f4c81; transition: background 0.3s; }
+        .value-card:hover .value-icon { background: #d9e4f0; }
+        .value-card h4 { font-weight: 700; color: #0a2a44; font-size: 1rem; margin-bottom: 6px; }
+        .value-card p { font-size: 0.9rem; color: #4a5b72; line-height: 1.5; }
 
-        .about-values {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-            margin-bottom: 50px;
-        }
-        .value-card {
-            background: #ffffff;
-            padding: 28px 20px;
-            border-radius: 12px;
-            text-align: center;
-            border: 1px solid #e9edf2;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .value-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 8px 25px rgba(15, 76, 129, 0.08);
-        }
-        .value-card .value-icon {
-            width: 60px;
-            height: 60px;
-            background: #eef4fa;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 14px;
-            font-size: 1.6rem;
-            color: #0f4c81;
-            transition: background 0.3s;
-        }
-        .value-card:hover .value-icon {
-            background: #d9e4f0;
-        }
-        .value-card h4 {
-            font-weight: 700;
-            color: #0a2a44;
-            font-size: 1rem;
-            margin-bottom: 6px;
-        }
-        .value-card p {
-            font-size: 0.9rem;
-            color: #4a5b72;
-            line-height: 1.5;
-        }
+        .about-mission { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-bottom: 50px; }
+        .mission-box { background: #fff; padding: 28px 22px; border-radius: 12px; text-align: center; border: 1px solid #e9edf2; border-left-width: 4px; transition: all 0.3s; }
+        .mission-box:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.06); }
+        .mission-box i { font-size: 2.2rem; color: #0f4c81; margin-bottom: 10px; }
+        .mission-box h3 { font-weight: 700; color: #0a2a44; font-size: 1.1rem; margin-bottom: 6px; }
+        .mission-box p { font-size: 0.9rem; color: #4a5b72; line-height: 1.6; }
 
-        .about-mission {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin-bottom: 50px;
-        }
-        .mission-box {
-            background: #ffffff;
-            padding: 28px 22px;
-            border-radius: 12px;
-            text-align: center;
-            border: 1px solid #e9edf2;
-            border-left-width: 4px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .mission-box:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
-        }
-        .mission-box i {
-            font-size: 2.2rem;
-            color: #0f4c81;
-            margin-bottom: 10px;
-        }
-        .mission-box h3 {
-            font-weight: 700;
-            color: #0a2a44;
-            font-size: 1.1rem;
-            margin-bottom: 6px;
-        }
-        .mission-box p {
-            font-size: 0.9rem;
-            color: #4a5b72;
-            line-height: 1.6;
-        }
+        .about-cta { background: linear-gradient(135deg, #eef4fa 0%, #d9e4f0 100%); padding: 50px 40px; border-radius: 16px; text-align: center; border: 1px solid #e9edf2; }
+        .about-cta h3 { font-size: 1.8rem; font-weight: 700; color: #0a2a44; margin-bottom: 8px; }
+        .about-cta p { font-size: 1.05rem; color: #3d4f66; margin-bottom: 24px; }
+        .about-cta .btn-about-primary { background: #0f4c81; color: #fff; padding: 12px 34px; border-radius: 40px; font-weight: 700; font-size: 0.95rem; border: none; cursor: pointer; transition: background 0.3s; }
+        .about-cta .btn-about-primary:hover { background: #0a3a62; }
+        .about-cta .btn-about-secondary { background: transparent; color: #0f4c81; padding: 11px 32px; border-radius: 40px; font-weight: 700; font-size: 0.95rem; border: 2px solid #0f4c81; cursor: pointer; transition: all 0.3s; }
+        .about-cta .btn-about-secondary:hover { background: #0f4c81; color: #fff; }
 
-        .about-cta {
-            background: linear-gradient(135deg, #eef4fa 0%, #d9e4f0 100%);
-            padding: 50px 40px;
-            border-radius: 16px;
-            text-align: center;
-            border: 1px solid #e9edf2;
-        }
-        .about-cta h3 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #0a2a44;
-            margin-bottom: 8px;
-        }
-        .about-cta p {
-            font-size: 1.05rem;
-            color: #3d4f66;
-            margin-bottom: 24px;
-        }
-        .about-cta .btn-about-primary {
-            display: inline-block;
-            background: #0f4c81;
-            color: #fff;
-            padding: 12px 34px;
-            border-radius: 40px;
-            font-weight: 700;
-            font-size: 0.95rem;
-            margin: 0 8px 8px 0;
-            transition: background 0.3s, transform 0.2s;
-            border: none;
-            cursor: pointer;
-        }
-        .about-cta .btn-about-primary:hover {
-            background: #0a3a62;
-            transform: scale(1.02);
-        }
-        .about-cta .btn-about-secondary {
-            display: inline-block;
-            background: transparent;
-            color: #0f4c81;
-            padding: 11px 32px;
-            border-radius: 40px;
-            font-weight: 700;
-            font-size: 0.95rem;
-            border: 2px solid #0f4c81;
-            transition: all 0.3s, transform 0.2s;
-            cursor: pointer;
-        }
-        .about-cta .btn-about-secondary:hover {
-            background: #0f4c81;
-            color: #fff;
-            transform: scale(1.02);
-        }
+        /* Contact */
+        .contact-section { background: #fff; padding: 60px 0 50px; border-top: 1px solid #e9edf2; }
+        .contact-section h2 { font-size: 2rem; font-weight: 700; color: #0a2a44; text-align: center; margin-bottom: 8px; }
+        .contact-section .contact-subtitle { text-align: center; color: #5a6f87; margin-bottom: 40px; }
+        .contact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+        .contact-item { text-align: center; padding: 20px; border-radius: 12px; background: #f8fafc; border: 1px solid #e9edf2; transition: all 0.3s; }
+        .contact-item:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.06); }
+        .contact-item i { font-size: 2.2rem; color: #0f4c81; margin-bottom: 12px; }
+        .contact-item h4 { font-weight: 700; color: #0a2a44; font-size: 1rem; margin-bottom: 4px; }
+        .contact-item p { color: #5a6f87; font-size: 0.9rem; }
+        .contact-item a { color: #0f4c81; font-weight: 600; }
+        .contact-item a:hover { text-decoration: underline; }
 
-        /* ============================================================ */
-        /* ===== CONTACT SECTION ===== */
-        /* ============================================================ */
-        .contact-section {
-            background: #ffffff;
-            padding: 60px 0 50px;
-            border-top: 1px solid #e9edf2;
-        }
-        .contact-section h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #0a2a44;
-            text-align: center;
-            margin-bottom: 8px;
-        }
-        .contact-section .contact-subtitle {
-            text-align: center;
-            color: #5a6f87;
-            margin-bottom: 40px;
-        }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-        }
-        .contact-item {
-            text-align: center;
-            padding: 20px;
-            border-radius: 12px;
-            background: #f8fafc;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #e9edf2;
-        }
-        .contact-item:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
-        }
-        .contact-item i {
-            font-size: 2.2rem;
-            color: #0f4c81;
-            margin-bottom: 12px;
-        }
-        .contact-item h4 {
-            font-weight: 700;
-            color: #0a2a44;
-            font-size: 1rem;
-            margin-bottom: 4px;
-        }
-        .contact-item p {
-            color: #5a6f87;
-            font-size: 0.9rem;
-        }
-        .contact-item a {
-            color: #0f4c81;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-        .contact-item a:hover {
-            color: #0a3a62;
-            text-decoration: underline;
-        }
+        .contact-form-section { background: #f8fafc; padding: 50px 0 60px; }
+        .contact-form-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+        .contact-form-wrapper .form-info h3 { font-size: 1.6rem; font-weight: 700; color: #0a2a44; margin-bottom: 12px; }
+        .contact-form-wrapper .form-info p { color: #5a6f87; margin-bottom: 20px; }
+        .contact-form-wrapper .form-info .info-item { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; font-size: 0.95rem; }
+        .contact-form-wrapper .form-info .info-item i { width: 36px; height: 36px; background: #e9edf2; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #0f4c81; }
 
-        .contact-form-section {
-            background: #f8fafc;
-            padding: 50px 0 60px;
-        }
-        .contact-form-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: start;
-        }
-        .contact-form-wrapper .form-info h3 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #0a2a44;
-            margin-bottom: 12px;
-        }
-        .contact-form-wrapper .form-info p {
-            color: #5a6f87;
-            margin-bottom: 20px;
-        }
-        .contact-form-wrapper .form-info .info-item {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 12px;
-            font-size: 0.95rem;
-        }
-        .contact-form-wrapper .form-info .info-item i {
-            width: 36px;
-            height: 36px;
-            background: #e9edf2;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #0f4c81;
-            font-size: 1rem;
-        }
+        .contact-form-wrapper form { background: #fff; padding: 30px; border-radius: 14px; border: 1px solid #e9edf2; }
+        .contact-form-wrapper form .form-group { margin-bottom: 16px; }
+        .contact-form-wrapper form label { display: block; font-weight: 600; font-size: 0.85rem; color: #1a1a2e; margin-bottom: 4px; }
+        .contact-form-wrapper form input, .contact-form-wrapper form textarea, .contact-form-wrapper form select { width: 100%; padding: 10px 14px; border: 1px solid #dce3ec; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 0.9rem; background: #fff; }
+        .contact-form-wrapper form input:focus, .contact-form-wrapper form textarea:focus, .contact-form-wrapper form select:focus { outline: none; border-color: #0f4c81; }
+        .contact-form-wrapper form textarea { height: 100px; resize: vertical; }
+        .contact-form-wrapper form .btn-submit { background: #0f4c81; color: #fff; padding: 12px 32px; border: none; border-radius: 40px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: background 0.3s; width: 100%; }
+        .contact-form-wrapper form .btn-submit:hover { background: #0a3a62; }
 
-        .contact-form-wrapper form {
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 14px;
-            border: 1px solid #e9edf2;
-        }
-        .contact-form-wrapper form .form-group {
-            margin-bottom: 16px;
-        }
-        .contact-form-wrapper form label {
-            display: block;
-            font-weight: 600;
-            font-size: 0.85rem;
-            color: #1a1a2e;
-            margin-bottom: 4px;
-        }
-        .contact-form-wrapper form input,
-        .contact-form-wrapper form textarea,
-        .contact-form-wrapper form select {
-            width: 100%;
-            padding: 10px 14px;
-            border: 1px solid #dce3ec;
-            border-radius: 8px;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
-            transition: border-color 0.3s;
-            background: #ffffff;
-        }
-        .contact-form-wrapper form input:focus,
-        .contact-form-wrapper form textarea:focus,
-        .contact-form-wrapper form select:focus {
-            outline: none;
-            border-color: #0f4c81;
-        }
-        .contact-form-wrapper form textarea {
-            height: 100px;
-            resize: vertical;
-        }
-        .contact-form-wrapper form .btn-submit {
-            background: #0f4c81;
-            color: #fff;
-            padding: 12px 32px;
-            border: none;
-            border-radius: 40px;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background 0.3s ease;
-            width: 100%;
-        }
-        .contact-form-wrapper form .btn-submit:hover {
-            background: #0a3a62;
-        }
+        /* Footer */
+        footer { background: #0a1f2e; color: #cddbe9; padding: 30px 0 20px; text-align: center; font-size: 0.85rem; opacity: 0.7; }
 
-        /* ============================================================ */
-        /* ===== FOOTER ===== */
-        /* ============================================================ */
-        footer {
-            background: #0a1f2e;
-            color: #cddbe9;
-            padding: 30px 0 20px;
-        }
-        footer .container {
-            text-align: center;
-            font-size: 0.85rem;
-            opacity: 0.7;
-        }
-
-        /* ============================================================ */
-        /* ===== RESPONSIVE ===== */
-        /* ============================================================ */
-
+        /* Responsive */
         @media (max-width: 992px) {
-            .product-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .contact-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .contact-form-wrapper {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-            .about-stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .about-values {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .about-mission {
-                grid-template-columns: 1fr;
-            }
-            .about-header h2 {
-                font-size: 2rem;
-            }
+            .product-grid { grid-template-columns: repeat(2, 1fr); }
+            .contact-grid { grid-template-columns: repeat(2, 1fr); }
+            .contact-form-wrapper { grid-template-columns: 1fr; gap: 30px; }
+            .about-stats { grid-template-columns: repeat(2, 1fr); }
+            .about-values { grid-template-columns: repeat(2, 1fr); }
+            .about-mission { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                width: 100%;
-                flex-direction: column;
-                gap: 10px;
-                padding: 14px 0 8px;
-                border-top: 1px solid #e9edf2;
-                margin-top: 10px;
-            }
-            .nav-links.open {
-                display: flex;
-            }
-            .hamburger {
-                display: block;
-            }
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
-            .filter-bar {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .filter-bar .filter-group {
-                justify-content: center;
-            }
-            .top-bar .container {
-                flex-direction: column;
-                gap: 4px;
-            }
-            .product-card .product-details {
-                grid-template-columns: 1fr;
-            }
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            .contact-form-wrapper {
-                grid-template-columns: 1fr;
-            }
-            .contact-form-wrapper .form-info .info-item {
-                font-size: 0.85rem;
-            }
-            .about-stats {
-                grid-template-columns: 1fr 1fr;
-            }
-            .about-values {
-                grid-template-columns: 1fr;
-            }
-            .about-mission {
-                grid-template-columns: 1fr;
-            }
-            .about-header h2 {
-                font-size: 1.6rem;
-            }
-            .about-cta {
-                padding: 30px 20px;
-            }
-            .about-cta h3 {
-                font-size: 1.4rem;
-            }
-            .about-cta .btn-about-primary,
-            .about-cta .btn-about-secondary {
-                display: block;
-                width: 100%;
-                max-width: 280px;
-                margin: 6px auto;
-                text-align: center;
-            }
-            .about-header .about-subtitle {
-                font-size: 0.95rem;
-            }
+            .nav-links { display: none; width: 100%; flex-direction: column; gap: 10px; padding: 14px 0 8px; border-top: 1px solid #e9edf2; margin-top: 10px; }
+            .nav-links.open { display: flex; }
+            .hamburger { display: block; }
+            .product-grid { grid-template-columns: 1fr; }
+            .filter-bar { flex-direction: column; align-items: stretch; }
+            .top-bar .container { flex-direction: column; gap: 4px; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .contact-form-wrapper { grid-template-columns: 1fr; }
+            .about-stats { grid-template-columns: 1fr 1fr; }
+            .about-values { grid-template-columns: 1fr; }
+            .about-mission { grid-template-columns: 1fr; }
+            .about-header h2 { font-size: 1.6rem; }
+            .about-cta { padding: 30px 20px; }
         }
 
         @media (max-width: 480px) {
-            .product-card .btn-group {
-                flex-direction: column;
-            }
-            .product-card .btn-group a {
-                text-align: center;
-            }
-            .product-card .structure-image {
-                height: 140px;
-            }
-            .contact-section h2 {
-                font-size: 1.5rem;
-            }
-            .about-stats {
-                grid-template-columns: 1fr;
-            }
-            .about-header h2 {
-                font-size: 1.3rem;
-            }
-            .about-header .about-badge {
-                font-size: 0.7rem;
-            }
-            .about-cta {
-                padding: 24px 16px;
-            }
+            .product-card .btn-group { flex-direction: column; }
+            .product-card .btn-group a { text-align: center; }
+            .product-card .structure-image { height: 140px; }
+            .about-stats { grid-template-columns: 1fr; }
+            .about-header h2 { font-size: 1.3rem; }
+            .about-cta { padding: 24px 16px; }
         }
     </style>
 </head>
-
 <body>
 
-    <!-- ===== TOP BAR ===== -->
+    <!-- TOP BAR -->
     <div class="top-bar">
         <div class="container">
             <span>Welcome to Digital Molecules</span>
@@ -878,7 +196,7 @@
         </div>
     </div>
 
-    <!-- ===== HEADER ===== -->
+    <!-- HEADER -->
     <header>
         <div class="container navbar">
             <div class="logo">Digital<span>Molecules</span></div>
@@ -894,14 +212,14 @@
         </div>
     </header>
 
-    <!-- ===== BREADCRUMB ===== -->
+    <!-- BREADCRUMB -->
     <div class="breadcrumb">
         <div class="container">
             <a href="#">Home</a> / <span>Pharmaceutical Impurity Standards</span>
         </div>
     </div>
 
-    <!-- ===== PAGE HEADER ===== -->
+    <!-- PAGE HEADER -->
     <div class="page-header">
         <div class="container">
             <h1>Pharmaceutical Impurity Standards</h1>
@@ -909,7 +227,7 @@
         </div>
     </div>
 
-    <!-- ===== FILTER BAR ===== -->
+    <!-- FILTER BAR -->
     <div class="filter-bar">
         <div class="container" style="display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between; width:100%;">
             <div class="filter-group">
@@ -930,15 +248,14 @@
         </div>
     </div>
 
-    <!-- ===== PRODUCTS SECTION ===== -->
+    <!-- PRODUCTS -->
     <section class="products-section">
         <div class="container">
             <div class="product-grid">
 
-                <!-- PRODUCT 1: DM-0001 -->
                 <div class="product-card">
                     <div class="favorite-icon"><i class="far fa-heart"></i></div>
-                    <div class="structure-image" id="img-DM-0001">
+                    <div class="structure-image">
                         <div class="placeholder-text">
                             <i class="fas fa-image"></i>
                             <span>DM-0001</span>
@@ -947,14 +264,10 @@
                     <div class="product-name">Risidipalm Impurity-1</div>
                     <div class="category-tag">Risidipalm</div>
                     <div class="product-details">
-                        <span class="label">CAT No:</span>
-                        <span class="value">DM-0001</span>
-                        <span class="label">CAS No:</span>
-                        <span class="value">17412-23-6</span>
-                        <span class="label">Mol. Wt.:</span>
-                        <span class="value">181.62</span>
-                        <span class="label">Status:</span>
-                        <span class="value"><span class="in-stock">● In Stock</span></span>
+                        <span class="label">CAT No:</span><span class="value">DM-0001</span>
+                        <span class="label">CAS No:</span><span class="value">17412-23-6</span>
+                        <span class="label">Mol. Wt.:</span><span class="value">181.62</span>
+                        <span class="label">Status:</span><span class="value"><span class="in-stock">● In Stock</span></span>
                     </div>
                     <div class="btn-group">
                         <a href="#" class="btn-sm-primary">View Details</a>
@@ -963,10 +276,9 @@
                     </div>
                 </div>
 
-                <!-- PRODUCT 2: DM-0002 -->
                 <div class="product-card">
                     <div class="favorite-icon"><i class="far fa-heart"></i></div>
-                    <div class="structure-image" id="img-DM-0002">
+                    <div class="structure-image">
                         <div class="placeholder-text">
                             <i class="fas fa-image"></i>
                             <span>DM-0002</span>
@@ -975,14 +287,10 @@
                     <div class="product-name">Risidipalm Impurity-2 (Regio-isomer)</div>
                     <div class="category-tag">Risidipalm</div>
                     <div class="product-details">
-                        <span class="label">CAT No:</span>
-                        <span class="value">DM-0002</span>
-                        <span class="label">CAS No:</span>
-                        <span class="value">17412-20-3</span>
-                        <span class="label">Mol. Wt.:</span>
-                        <span class="value">181.62</span>
-                        <span class="label">Status:</span>
-                        <span class="value"><span class="in-stock">● In Stock</span></span>
+                        <span class="label">CAT No:</span><span class="value">DM-0002</span>
+                        <span class="label">CAS No:</span><span class="value">17412-20-3</span>
+                        <span class="label">Mol. Wt.:</span><span class="value">181.62</span>
+                        <span class="label">Status:</span><span class="value"><span class="in-stock">● In Stock</span></span>
                     </div>
                     <div class="btn-group">
                         <a href="#" class="btn-sm-primary">View Details</a>
@@ -991,10 +299,9 @@
                     </div>
                 </div>
 
-                <!-- PRODUCT 3: DM-0003 -->
                 <div class="product-card">
                     <div class="favorite-icon"><i class="far fa-heart"></i></div>
-                    <div class="structure-image" id="img-DM-0003">
+                    <div class="structure-image">
                         <div class="placeholder-text">
                             <i class="fas fa-image"></i>
                             <span>DM-0003</span>
@@ -1003,14 +310,10 @@
                     <div class="product-name">Abacavir N-nitroso</div>
                     <div class="category-tag">Abacavir</div>
                     <div class="product-details">
-                        <span class="label">CAT No:</span>
-                        <span class="value">DM-0003</span>
-                        <span class="label">CAS No:</span>
-                        <span class="value">N/A</span>
-                        <span class="label">Mol. Wt.:</span>
-                        <span class="value">315.3</span>
-                        <span class="label">Status:</span>
-                        <span class="value"><span class="in-stock">● In Stock</span></span>
+                        <span class="label">CAT No:</span><span class="value">DM-0003</span>
+                        <span class="label">CAS No:</span><span class="value">N/A</span>
+                        <span class="label">Mol. Wt.:</span><span class="value">315.3</span>
+                        <span class="label">Status:</span><span class="value"><span class="in-stock">● In Stock</span></span>
                     </div>
                     <div class="btn-group">
                         <a href="#" class="btn-sm-primary">View Details</a>
@@ -1019,10 +322,9 @@
                     </div>
                 </div>
 
-                <!-- PRODUCT 4: DM-0004 -->
                 <div class="product-card">
                     <div class="favorite-icon"><i class="far fa-heart"></i></div>
-                    <div class="structure-image" id="img-DM-0004">
+                    <div class="structure-image">
                         <div class="placeholder-text">
                             <i class="fas fa-image"></i>
                             <span>DM-0004</span>
@@ -1031,14 +333,10 @@
                     <div class="product-name">Nilotinib N-nitroso</div>
                     <div class="category-tag">Nilotinib</div>
                     <div class="product-details">
-                        <span class="label">CAT No:</span>
-                        <span class="value">DM-0004</span>
-                        <span class="label">CAS No:</span>
-                        <span class="value">2925306-68-7</span>
-                        <span class="label">Mol. Wt.:</span>
-                        <span class="value">558.5</span>
-                        <span class="label">Status:</span>
-                        <span class="value"><span class="in-stock">● In Stock</span></span>
+                        <span class="label">CAT No:</span><span class="value">DM-0004</span>
+                        <span class="label">CAS No:</span><span class="value">2925306-68-7</span>
+                        <span class="label">Mol. Wt.:</span><span class="value">558.5</span>
+                        <span class="label">Status:</span><span class="value"><span class="in-stock">● In Stock</span></span>
                     </div>
                     <div class="btn-group">
                         <a href="#" class="btn-sm-primary">View Details</a>
@@ -1047,10 +345,9 @@
                     </div>
                 </div>
 
-                <!-- PRODUCT 5: DM-0005 -->
                 <div class="product-card">
                     <div class="favorite-icon"><i class="far fa-heart"></i></div>
-                    <div class="structure-image" id="img-DM-0005">
+                    <div class="structure-image">
                         <div class="placeholder-text">
                             <i class="fas fa-image"></i>
                             <span>DM-0005</span>
@@ -1059,14 +356,10 @@
                     <div class="product-name">Tenofovir Impurity K</div>
                     <div class="category-tag">Tenofovir</div>
                     <div class="product-details">
-                        <span class="label">CAT No:</span>
-                        <span class="value">DM-0005</span>
-                        <span class="label">CAS No:</span>
-                        <span class="value">4121-40-8</span>
-                        <span class="label">Mol. Wt.:</span>
-                        <span class="value">175.2</span>
-                        <span class="label">Status:</span>
-                        <span class="value"><span class="in-stock">● In Stock</span></span>
+                        <span class="label">CAT No:</span><span class="value">DM-0005</span>
+                        <span class="label">CAS No:</span><span class="value">4121-40-8</span>
+                        <span class="label">Mol. Wt.:</span><span class="value">175.2</span>
+                        <span class="label">Status:</span><span class="value"><span class="in-stock">● In Stock</span></span>
                     </div>
                     <div class="btn-group">
                         <a href="#" class="btn-sm-primary">View Details</a>
@@ -1075,10 +368,9 @@
                     </div>
                 </div>
 
-                <!-- PRODUCT 6: DM-0006 -->
                 <div class="product-card">
                     <div class="favorite-icon"><i class="far fa-heart"></i></div>
-                    <div class="structure-image" id="img-DM-0006">
+                    <div class="structure-image">
                         <div class="placeholder-text">
                             <i class="fas fa-image"></i>
                             <span>DM-0006</span>
@@ -1087,14 +379,10 @@
                     <div class="product-name">(Z)-9-Propenyl Adenine</div>
                     <div class="category-tag">Tenofovir</div>
                     <div class="product-details">
-                        <span class="label">CAT No:</span>
-                        <span class="value">DM-0006</span>
-                        <span class="label">CAS No:</span>
-                        <span class="value">1464851-21-5</span>
-                        <span class="label">Mol. Wt.:</span>
-                        <span class="value">175.2</span>
-                        <span class="label">Status:</span>
-                        <span class="value"><span class="in-stock">● In Stock</span></span>
+                        <span class="label">CAT No:</span><span class="value">DM-0006</span>
+                        <span class="label">CAS No:</span><span class="value">1464851-21-5</span>
+                        <span class="label">Mol. Wt.:</span><span class="value">175.2</span>
+                        <span class="label">Status:</span><span class="value"><span class="in-stock">● In Stock</span></span>
                     </div>
                     <div class="btn-group">
                         <a href="#" class="btn-sm-primary">View Details</a>
@@ -1105,7 +393,6 @@
 
             </div>
 
-            <!-- ===== PAGINATION ===== -->
             <div class="pagination">
                 <a href="#" class="active">1</a>
                 <a href="#">2</a>
@@ -1116,12 +403,9 @@
         </div>
     </section>
 
-    <!-- ============================================================ -->
-    <!-- ===== ABOUT SECTION ===== -->
-    <!-- ============================================================ -->
+    <!-- ABOUT -->
     <section class="about-section" id="about">
         <div class="container">
-
             <div class="about-header">
                 <span class="about-badge">ABOUT DIGITAL MOLECULES</span>
                 <h2>Committed to Quality.<br>Dedicated to Excellence.</h2>
@@ -1133,44 +417,32 @@
             </div>
 
             <div class="about-stats">
-                <div class="stat-box">
-                    <span class="stat-number">2024</span>
-                    <span class="stat-label">Founded</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">20,000+</span>
-                    <span class="stat-label">Products</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">98%</span>
-                    <span class="stat-label">Purity</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Countries</span>
-                </div>
+                <div class="stat-box"><span class="stat-number">2024</span><span class="stat-label">Founded</span></div>
+                <div class="stat-box"><span class="stat-number">20,000+</span><span class="stat-label">Products</span></div>
+                <div class="stat-box"><span class="stat-number">98%</span><span class="stat-label">Purity</span></div>
+                <div class="stat-box"><span class="stat-number">50+</span><span class="stat-label">Countries</span></div>
             </div>
 
             <div class="about-values">
                 <div class="value-card">
                     <div class="value-icon"><i class="fas fa-flask"></i></div>
                     <h4>High-Quality Products</h4>
-                    <p>Strict quality control and compliance with global standards. Every product is rigorously tested.</p>
+                    <p>Strict quality control and compliance with global standards.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon"><i class="fas fa-headset"></i></div>
                     <h4>Reliable Service</h4>
-                    <p>Customer satisfaction is our priority. We are here to support you at every step.</p>
+                    <p>Customer satisfaction is our priority. We are here to support you.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon"><i class="fas fa-bolt"></i></div>
                     <h4>Fast Response</h4>
-                    <p>Quick turnaround time and efficient support for all inquiries and custom requests.</p>
+                    <p>Quick turnaround time and efficient support for all inquiries.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon"><i class="fas fa-tag"></i></div>
                     <h4>Competitive Pricing</h4>
-                    <p>Best value for high-quality products to meet your research and development needs.</p>
+                    <p>Best value for high-quality products to meet your needs.</p>
                 </div>
             </div>
 
@@ -1178,7 +450,7 @@
                 <div class="mission-box">
                     <i class="fas fa-bullseye"></i>
                     <h3>Our Mission</h3>
-                    <p>To accelerate pharmaceutical research by providing high-purity impurity standards with unmatched reliability and service.</p>
+                    <p>To accelerate pharmaceutical research by providing high-purity impurity standards with unmatched reliability.</p>
                 </div>
                 <div class="mission-box">
                     <i class="fas fa-eye"></i>
@@ -1198,18 +470,14 @@
                 <a href="#" class="btn-about-primary">Browse Products</a>
                 <a href="#contact" class="btn-about-secondary">Contact Us</a>
             </div>
-
         </div>
     </section>
 
-    <!-- ============================================================ -->
-    <!-- ===== CONTACT SECTION ===== -->
-    <!-- ============================================================ -->
+    <!-- CONTACT -->
     <section class="contact-section" id="contact">
         <div class="container">
             <h2>Get in Touch</h2>
             <p class="contact-subtitle">Have questions or need a quote? We're here to help.</p>
-
             <div class="contact-grid">
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
@@ -1235,11 +503,10 @@
         </div>
     </section>
 
-    <!-- ===== CONTACT FORM SECTION ===== -->
+    <!-- CONTACT FORM -->
     <section class="contact-form-section">
         <div class="container">
             <div class="contact-form-wrapper">
-
                 <div class="form-info">
                     <h3>Send Us a Message</h3>
                     <p>We'll get back to you within 24 hours.</p>
@@ -1256,7 +523,6 @@
                         <span>Hyderabad, Telangana, India</span>
                     </div>
                 </div>
-
                 <form action="#" method="POST">
                     <div class="form-group">
                         <label for="name">Full Name</label>
@@ -1286,27 +552,23 @@
                     </div>
                     <button type="submit" class="btn-submit">Send Message</button>
                 </form>
-
             </div>
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             &copy; 2026 Digital Molecules. All rights reserved.
         </div>
     </footer>
 
-    <!-- ===== HAMBURGER TOGGLE ===== -->
     <script>
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('navLinks');
-
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('open');
         });
-
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('open');
