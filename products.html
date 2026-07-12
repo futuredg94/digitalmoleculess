@@ -76,7 +76,9 @@
         .pagination a { display: inline-block; padding: 8px 16px; border-radius: 8px; border: 1px solid #dce3ec; font-weight: 600; font-size: 0.85rem; transition: all 0.3s; }
         .pagination a:hover, .pagination a.active { background: #0f4c81; color: #fff; border-color: #0f4c81; }
 
-        /* About */
+        /* ============================================================ */
+        /* ===== ABOUT SECTION ===== */
+        /* ============================================================ */
         .about-section { padding: 70px 0 60px; background: #fff; border-top: 1px solid #e9edf2; border-bottom: 1px solid #e9edf2; }
         .about-header { text-align: center; max-width: 800px; margin: 0 auto 50px; }
         .about-header .about-badge { display: inline-block; font-size: 0.75rem; font-weight: 700; color: #0f4c81; text-transform: uppercase; letter-spacing: 2px; border-bottom: 3px solid #0f4c81; padding-bottom: 6px; margin-bottom: 12px; }
@@ -97,14 +99,7 @@
         .value-card h4 { font-weight: 700; color: #0a2a44; font-size: 1rem; margin-bottom: 6px; }
         .value-card p { font-size: 0.9rem; color: #4a5b72; line-height: 1.5; }
 
-        .about-mission { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-bottom: 50px; }
-        .mission-box { background: #fff; padding: 28px 22px; border-radius: 12px; text-align: center; border: 1px solid #e9edf2; border-left-width: 4px; transition: all 0.3s; }
-        .mission-box:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.06); }
-        .mission-box i { font-size: 2.2rem; color: #0f4c81; margin-bottom: 10px; }
-        .mission-box h3 { font-weight: 700; color: #0a2a44; font-size: 1.1rem; margin-bottom: 6px; }
-        .mission-box p { font-size: 0.9rem; color: #4a5b72; line-height: 1.6; }
-
-        .about-cta { background: linear-gradient(135deg, #eef4fa 0%, #d9e4f0 100%); padding: 50px 40px; border-radius: 16px; text-align: center; border: 1px solid #e9edf2; }
+        .about-cta { background: linear-gradient(135deg, #eef4fa 0%, #d9e4f0 100%); padding: 50px 40px; border-radius: 16px; text-align: center; border: 1px solid #e9edf2; margin-top: 30px; }
         .about-cta h3 { font-size: 1.8rem; font-weight: 700; color: #0a2a44; margin-bottom: 8px; }
         .about-cta p { font-size: 1.05rem; color: #3d4f66; margin-bottom: 24px; }
         .about-cta .btn-about-primary { background: #0f4c81; color: #fff; padding: 12px 34px; border-radius: 40px; font-weight: 700; font-size: 0.95rem; border: none; cursor: pointer; transition: background 0.3s; }
@@ -112,7 +107,9 @@
         .about-cta .btn-about-secondary { background: transparent; color: #0f4c81; padding: 11px 32px; border-radius: 40px; font-weight: 700; font-size: 0.95rem; border: 2px solid #0f4c81; cursor: pointer; transition: all 0.3s; }
         .about-cta .btn-about-secondary:hover { background: #0f4c81; color: #fff; }
 
-        /* Contact */
+        /* ============================================================ */
+        /* ===== CONTACT SECTION ===== */
+        /* ============================================================ */
         .contact-section { background: #fff; padding: 60px 0 50px; border-top: 1px solid #e9edf2; }
         .contact-section h2 { font-size: 2rem; font-weight: 700; color: #0a2a44; text-align: center; margin-bottom: 8px; }
         .contact-section .contact-subtitle { text-align: center; color: #5a6f87; margin-bottom: 40px; }
@@ -125,33 +122,27 @@
         .contact-item a { color: #0f4c81; font-weight: 600; }
         .contact-item a:hover { text-decoration: underline; }
 
-        .contact-form-section { background: #f8fafc; padding: 50px 0 60px; }
-        .contact-form-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
-        .contact-form-wrapper .form-info h3 { font-size: 1.6rem; font-weight: 700; color: #0a2a44; margin-bottom: 12px; }
-        .contact-form-wrapper .form-info p { color: #5a6f87; margin-bottom: 20px; }
-        .contact-form-wrapper .form-info .info-item { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; font-size: 0.95rem; }
-        .contact-form-wrapper .form-info .info-item i { width: 36px; height: 36px; background: #e9edf2; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #0f4c81; }
-
-        .contact-form-wrapper form { background: #fff; padding: 30px; border-radius: 14px; border: 1px solid #e9edf2; }
-        .contact-form-wrapper form .form-group { margin-bottom: 16px; }
-        .contact-form-wrapper form label { display: block; font-weight: 600; font-size: 0.85rem; color: #1a1a2e; margin-bottom: 4px; }
-        .contact-form-wrapper form input, .contact-form-wrapper form textarea, .contact-form-wrapper form select { width: 100%; padding: 10px 14px; border: 1px solid #dce3ec; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 0.9rem; background: #fff; }
-        .contact-form-wrapper form input:focus, .contact-form-wrapper form textarea:focus, .contact-form-wrapper form select:focus { outline: none; border-color: #0f4c81; }
-        .contact-form-wrapper form textarea { height: 100px; resize: vertical; }
-        .contact-form-wrapper form .btn-submit { background: #0f4c81; color: #fff; padding: 12px 32px; border: none; border-radius: 40px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: background 0.3s; width: 100%; }
-        .contact-form-wrapper form .btn-submit:hover { background: #0a3a62; }
+        .contact-cta { background: linear-gradient(135deg, #eef4fa 0%, #d9e4f0 100%); padding: 40px; border-radius: 16px; text-align: center; border: 1px solid #e9edf2; margin-top: 30px; }
+        .contact-cta h3 { font-size: 1.8rem; font-weight: 700; color: #0a2a44; margin-bottom: 8px; }
+        .contact-cta p { font-size: 1.05rem; color: #3d4f66; margin-bottom: 20px; }
+        .contact-cta .cta-phone { display: inline-block; background: #0f4c81; color: #fff; padding: 12px 34px; border-radius: 40px; font-weight: 700; font-size: 0.95rem; margin: 0 10px 10px 0; transition: background 0.3s; }
+        .contact-cta .cta-phone:hover { background: #0a3a62; }
+        .contact-cta .cta-phone i { margin-right: 8px; }
+        .contact-cta .cta-email { display: inline-block; background: transparent; color: #0f4c81; padding: 11px 32px; border-radius: 40px; font-weight: 700; font-size: 0.95rem; border: 2px solid #0f4c81; transition: all 0.3s; }
+        .contact-cta .cta-email:hover { background: #0f4c81; color: #fff; }
+        .contact-cta .cta-email i { margin-right: 8px; }
 
         /* Footer */
         footer { background: #0a1f2e; color: #cddbe9; padding: 30px 0 20px; text-align: center; font-size: 0.85rem; opacity: 0.7; }
 
-        /* Responsive */
+        /* ============================================================ */
+        /* ===== RESPONSIVE ===== */
+        /* ============================================================ */
         @media (max-width: 992px) {
             .product-grid { grid-template-columns: repeat(2, 1fr); }
             .contact-grid { grid-template-columns: repeat(2, 1fr); }
-            .contact-form-wrapper { grid-template-columns: 1fr; gap: 30px; }
             .about-stats { grid-template-columns: repeat(2, 1fr); }
             .about-values { grid-template-columns: repeat(2, 1fr); }
-            .about-mission { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 768px) {
@@ -162,12 +153,12 @@
             .filter-bar { flex-direction: column; align-items: stretch; }
             .top-bar .container { flex-direction: column; gap: 4px; }
             .contact-grid { grid-template-columns: 1fr; }
-            .contact-form-wrapper { grid-template-columns: 1fr; }
             .about-stats { grid-template-columns: 1fr 1fr; }
             .about-values { grid-template-columns: 1fr; }
-            .about-mission { grid-template-columns: 1fr; }
             .about-header h2 { font-size: 1.6rem; }
             .about-cta { padding: 30px 20px; }
+            .contact-cta { padding: 30px 20px; }
+            .contact-cta .cta-phone, .contact-cta .cta-email { display: block; width: 100%; margin: 6px 0; }
         }
 
         @media (max-width: 480px) {
@@ -177,12 +168,13 @@
             .about-stats { grid-template-columns: 1fr; }
             .about-header h2 { font-size: 1.3rem; }
             .about-cta { padding: 24px 16px; }
+            .contact-cta { padding: 24px 16px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- TOP BAR -->
+    <!-- ===== TOP BAR ===== -->
     <div class="top-bar">
         <div class="container">
             <span>Welcome to Digital Molecules</span>
@@ -196,7 +188,7 @@
         </div>
     </div>
 
-    <!-- HEADER -->
+    <!-- ===== HEADER ===== -->
     <header>
         <div class="container navbar">
             <div class="logo">Digital<span>Molecules</span></div>
@@ -212,14 +204,14 @@
         </div>
     </header>
 
-    <!-- BREADCRUMB -->
+    <!-- ===== BREADCRUMB ===== -->
     <div class="breadcrumb">
         <div class="container">
             <a href="#">Home</a> / <span>Pharmaceutical Impurity Standards</span>
         </div>
     </div>
 
-    <!-- PAGE HEADER -->
+    <!-- ===== PAGE HEADER ===== -->
     <div class="page-header">
         <div class="container">
             <h1>Pharmaceutical Impurity Standards</h1>
@@ -227,7 +219,7 @@
         </div>
     </div>
 
-    <!-- FILTER BAR -->
+    <!-- ===== FILTER BAR ===== -->
     <div class="filter-bar">
         <div class="container" style="display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between; width:100%;">
             <div class="filter-group">
@@ -248,11 +240,12 @@
         </div>
     </div>
 
-    <!-- PRODUCTS -->
+    <!-- ===== PRODUCTS SECTION ===== -->
     <section class="products-section">
         <div class="container">
             <div class="product-grid">
 
+                <!-- Product 1 -->
                 <div class="product-card">
                     <div class="favorite-icon"><i class="far fa-heart"></i></div>
                     <div class="structure-image">
@@ -276,6 +269,7 @@
                     </div>
                 </div>
 
+                <!-- Product 2 -->
                 <div class="product-card">
                     <div class="favorite-icon"><i class="far fa-heart"></i></div>
                     <div class="structure-image">
@@ -299,6 +293,7 @@
                     </div>
                 </div>
 
+                <!-- Product 3 -->
                 <div class="product-card">
                     <div class="favorite-icon"><i class="far fa-heart"></i></div>
                     <div class="structure-image">
@@ -322,6 +317,7 @@
                     </div>
                 </div>
 
+                <!-- Product 4 -->
                 <div class="product-card">
                     <div class="favorite-icon"><i class="far fa-heart"></i></div>
                     <div class="structure-image">
@@ -345,6 +341,7 @@
                     </div>
                 </div>
 
+                <!-- Product 5 -->
                 <div class="product-card">
                     <div class="favorite-icon"><i class="far fa-heart"></i></div>
                     <div class="structure-image">
@@ -368,6 +365,7 @@
                     </div>
                 </div>
 
+                <!-- Product 6 -->
                 <div class="product-card">
                     <div class="favorite-icon"><i class="far fa-heart"></i></div>
                     <div class="structure-image">
@@ -403,9 +401,12 @@
         </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ============================================================ -->
+    <!-- ===== ABOUT SECTION ===== -->
+    <!-- ============================================================ -->
     <section class="about-section" id="about">
         <div class="container">
+
             <div class="about-header">
                 <span class="about-badge">ABOUT DIGITAL MOLECULES</span>
                 <h2>Committed to Quality.<br>Dedicated to Excellence.</h2>
@@ -417,16 +418,28 @@
             </div>
 
             <div class="about-stats">
-                <div class="stat-box"><span class="stat-number">2024</span><span class="stat-label">Founded</span></div>
-                <div class="stat-box"><span class="stat-number">20,000+</span><span class="stat-label">Products</span></div>
-                <div class="stat-box"><span class="stat-number">98%</span><span class="stat-label">Purity</span></div>
-                <div class="stat-box"><span class="stat-number">50+</span><span class="stat-label">Countries</span></div>
+                <div class="stat-box">
+                    <span class="stat-number">20,000+</span>
+                    <span class="stat-label">Products</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Purity</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Support</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Countries</span>
+                </div>
             </div>
 
             <div class="about-values">
                 <div class="value-card">
                     <div class="value-icon"><i class="fas fa-flask"></i></div>
-                    <h4>High-Quality Products</h4>
+                    <h4>High Quality Products</h4>
                     <p>Strict quality control and compliance with global standards.</p>
                 </div>
                 <div class="value-card">
@@ -442,42 +455,28 @@
                 <div class="value-card">
                     <div class="value-icon"><i class="fas fa-tag"></i></div>
                     <h4>Competitive Pricing</h4>
-                    <p>Best value for high-quality products to meet your needs.</p>
-                </div>
-            </div>
-
-            <div class="about-mission">
-                <div class="mission-box">
-                    <i class="fas fa-bullseye"></i>
-                    <h3>Our Mission</h3>
-                    <p>To accelerate pharmaceutical research by providing high-purity impurity standards with unmatched reliability.</p>
-                </div>
-                <div class="mission-box">
-                    <i class="fas fa-eye"></i>
-                    <h3>Our Vision</h3>
-                    <p>To become the most trusted global partner for pharmaceutical impurity standards and fine chemicals.</p>
-                </div>
-                <div class="mission-box">
-                    <i class="fas fa-handshake"></i>
-                    <h3>Our Promise</h3>
-                    <p>Quality, accuracy, and integrity in every product we deliver. Your success is our success.</p>
+                    <p>Best value for high quality products to meet your requirements.</p>
                 </div>
             </div>
 
             <div class="about-cta">
-                <h3>Ready to Partner With Us?</h3>
-                <p>Explore our extensive catalog of high-purity reference standards and fine chemicals.</p>
-                <a href="#" class="btn-about-primary">Browse Products</a>
-                <a href="#contact" class="btn-about-secondary">Contact Us</a>
+                <h3>Have a Question or Need a Quote?</h3>
+                <p>We are here to help you. Get in touch with us today.</p>
+                <a href="tel:+918919727242" class="btn-about-primary"><i class="fas fa-phone"></i> +91 8919727242</a>
+                <a href="mailto:purchase@digitalmolecules.com" class="btn-about-secondary"><i class="fas fa-envelope"></i> Email Us</a>
             </div>
+
         </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- ============================================================ -->
+    <!-- ===== CONTACT SECTION ===== -->
+    <!-- ============================================================ -->
     <section class="contact-section" id="contact">
         <div class="container">
             <h2>Get in Touch</h2>
             <p class="contact-subtitle">Have questions or need a quote? We're here to help.</p>
+
             <div class="contact-grid">
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
@@ -500,63 +499,18 @@
                     <p>Mon–Sat, 9:00 AM – 6:00 PM</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- CONTACT FORM -->
-    <section class="contact-form-section">
-        <div class="container">
-            <div class="contact-form-wrapper">
-                <div class="form-info">
-                    <h3>Send Us a Message</h3>
-                    <p>We'll get back to you within 24 hours.</p>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <span><a href="tel:+918919727242" style="color:#0f4c81; font-weight:600;">+91 8919727242</a></span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <span><a href="mailto:purchase@digitalmolecules.com" style="color:#0f4c81; font-weight:600;">purchase@digitalmolecules.com</a></span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Hyderabad, Telangana, India</span>
-                    </div>
-                </div>
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" placeholder="Your full name" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" placeholder="you@example.com" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" placeholder="+91 XXXXX XXXXX" />
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <select id="subject">
-                            <option>Product Inquiry</option>
-                            <option>Request a Quote</option>
-                            <option>Custom Synthesis</option>
-                            <option>Order Support</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" placeholder="Tell us about your requirement..."></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">Send Message</button>
-                </form>
+            <div class="contact-cta">
+                <h3>Have a Question or Need a Quote?</h3>
+                <p>We are here to help you. Get in touch with us today.</p>
+                <a href="tel:+918919727242" class="cta-phone"><i class="fas fa-phone"></i> +91 8919727242</a>
+                <a href="mailto:purchase@digitalmolecules.com" class="cta-email"><i class="fas fa-envelope"></i> Email Us</a>
             </div>
+
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
             &copy; 2026 Digital Molecules. All rights reserved.
