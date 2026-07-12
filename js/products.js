@@ -14,7 +14,7 @@
     "application": "NA",
     "description": "yellow color solid",
     "availability": "In Stock",
-    "image": "images/products/default.png"
+    "image": "DM-0001.png"
   },
   {
     "id": "DM-0002",
@@ -31,7 +31,7 @@
     "application": "NA",
     "description": "yellow color solid",
     "availability": "In Stock",
-    "image": "images/products/default.png"
+    "image": "DM-0002.png"
   },
   {
     "id": "DM-0003",
@@ -48,7 +48,7 @@
     "application": "NA",
     "description": "Faint white solid",
     "availability": "In Stock",
-    "image": "images/products/default.png"
+    "image": "DM-0003.png"
   },
   {
     "id": "DM-0004",
@@ -65,7 +65,7 @@
     "application": "",
     "description": "yellow solid",
     "availability": "In Stock",
-    "image": "images/products/default.png"
+    "image": "DM-0004.png"
   },
   {
     "id": "DM-0005",
@@ -82,7 +82,7 @@
     "application": "",
     "description": "off white solid",
     "availability": "In Stock",
-    "image": "images/products/default.png"
+    "image": "DM-0005.png"
   },
   {
     "id": "DM-0006",
@@ -99,6 +99,6 @@
     "application": "",
     "description": "off white solid",
     "availability": "In Stock",
-    "image": "images/products/default.png"
+    "image": "DM-0006.png"
   }
 ]
