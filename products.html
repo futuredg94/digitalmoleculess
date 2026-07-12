@@ -1,101 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products | Digital Molecules</title>
-    <meta name="description" content="Browse pharmaceutical impurities and specialty chemicals available from Digital Molecules.">
-
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Products - Digital Molecules</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <!-- ===== Header ===== -->
-    <header class="header">
-        <div class="container nav">
-            <div class="logo">Digital Molecules</div>
-            <nav class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="products.html">Products</a>
+    <!-- ===== HEADER / NAVIGATION ===== -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>Digital Molecules</h1>
+                <span>Impurity Standards &amp; Fine Chemicals</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </nav>
+            <div class="hamburger" id="hamburger">&#9776;</div>
         </div>
     </header>
 
-    <!-- ===== Page Header ===== -->
-    <section class="section">
+    <!-- ===== PRODUCTS SECTION ===== -->
+    <section class="products-page">
         <div class="container">
-            <h1>Product Catalog</h1>
-            <p>
-                Browse available pharmaceutical impurities and specialty compounds. 
-                Use the search and filters to quickly locate specific materials.
-            </p>
-        </div>
-    </section>
+            <h2 class="section-title">Our Product Catalog</h2>
+            <p class="section-subtitle">High-purity reference standards, impurities, and fine chemicals for pharmaceutical research.</p>
 
-    <!-- ===== Filters ===== -->
-    <section class="section light">
-        <div class="container">
+            <!-- Product count -->
+            <div class="product-count">
+                <span>Showing 6 of 20,000+ products</span>
+            </div>
 
-            <div class="grid grid-3">
+            <!-- Product Grid -->
+            <div class="product-grid">
 
-                <!-- Search -->
-                <div>
-                    <label for="search">Search</label>
-                    <input type="text" id="search" placeholder="Search by name, CAS number...">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-badge">In Stock</div>
+                    <h3>Risidipalm impurity-1</h3>
+                    <p class="product-cat">Category: Risidipalm</p>
+                    <p class="product-desc">yellow color solid | 6-chloro-2,8-dimethyl</p>
+                    <div class="product-details">
+                        <span><strong>Catalog:</strong> DM-0001</span>
+                        <span><strong>CAS:</strong> 17412-23-6</span>
+                        <span><strong>Formula:</strong> C8H8ClN3</span>
+                        <span><strong>MW:</strong> 181.62</span>
+                        <span><strong>Purity:</strong> &lt;95%</span>
+                    </div>
+                    <a href="mailto:purchase@digitalmoleculess.com?subject=Inquiry%20for%20DM-0001" class="btn btn-small">Inquire Now</a>
                 </div>
 
-                <!-- Sort -->
-                <div>
-                    <label for="sort">Sort By</label>
-                    <select id="sort">
-                        <option value="name">Name (A–Z)</option>
-                        <option value="name-desc">Name (Z–A)</option>
-                        <option value="mw">Molecular Weight (Low → High)</option>
-                        <option value="mw-desc">Molecular Weight (High → Low)</option>
-                    </select>
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-badge">In Stock</div>
+                    <h3>Risidipalm impurity-2 Regio-isomer</h3>
+                    <p class="product-cat">Category: Risidipalm</p>
+                    <p class="product-desc">yellow color solid | 6-Chloro-2,7-dimethyl</p>
+                    <div class="product-details">
+                        <span><strong>Catalog:</strong> DM-0002</span>
+                        <span><strong>CAS:</strong> 17412-20-3</span>
+                        <span><strong>Formula:</strong> C8H8ClN3</span>
+                        <span><strong>MW:</strong> 181.62</span>
+                        <span><strong>Purity:</strong> &lt;95%</span>
+                    </div>
+                    <a href="mailto:purchase@digitalmoleculess.com?subject=Inquiry%20for%20DM-0002" class="btn btn-small">Inquire Now</a>
                 </div>
 
-                <!-- Reset -->
-                <div style="display: flex; align-items: flex-end;">
-                    <button id="reset" class="btn btn-outline" style="width: 100%;">
-                        Reset Filters
-                    </button>
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-badge">In Stock</div>
+                    <h3>Abacavir N-nitroso</h3>
+                    <p class="product-cat">Category: Abacavir</p>
+                    <p class="product-desc">Faint white solid | N-nitroso derivative</p>
+                    <div class="product-details">
+                        <span><strong>Catalog:</strong> DM-0003</span>
+                        <span><strong>CAS:</strong> NA</span>
+                        <span><strong>Formula:</strong> C14H17N7O2</span>
+                        <span><strong>MW:</strong> 315.3</span>
+                        <span><strong>Purity:</strong> &lt;98%</span>
+                    </div>
+                    <a href="mailto:purchase@digitalmoleculess.com?subject=Inquiry%20for%20DM-0003" class="btn btn-small">Inquire Now</a>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-badge">In Stock</div>
+                    <h3>Nilotinib N-nitroso</h3>
+                    <p class="product-cat">Category: Nilotinib</p>
+                    <p class="product-desc">yellow solid | N-nitroso derivative</p>
+                    <div class="product-details">
+                        <span><strong>Catalog:</strong> DM-0004</span>
+                        <span><strong>CAS:</strong> 2925306-68-7</span>
+                        <span><strong>Formula:</strong> C28H21F3N8O2</span>
+                        <span><strong>MW:</strong> 558.5</span>
+                        <span><strong>Purity:</strong> &lt;98%</span>
+                    </div>
+                    <a href="mailto:purchase@digitalmoleculess.com?subject=Inquiry%20for%20DM-0004" class="btn btn-small">Inquire Now</a>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-badge">In Stock</div>
+                    <h3>Tenofovir impurity K</h3>
+                    <p class="product-cat">Category: Tenofovir</p>
+                    <p class="product-desc">off white solid | 9-Propenyladenine</p>
+                    <div class="product-details">
+                        <span><strong>Catalog:</strong> DM-0005</span>
+                        <span><strong>CAS:</strong> 4121-40-8</span>
+                        <span><strong>Formula:</strong> C8H9N5</span>
+                        <span><strong>MW:</strong> 175.2</span>
+                        <span><strong>Purity:</strong> &lt;95%</span>
+                    </div>
+                    <a href="mailto:purchase@digitalmoleculess.com?subject=Inquiry%20for%20DM-0005" class="btn btn-small">Inquire Now</a>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-badge">In Stock</div>
+                    <h3>(Z)-9-Propenyl adenine</h3>
+                    <p class="product-cat">Category: Tenofovir</p>
+                    <p class="product-desc">off white solid | (Z)-isomer</p>
+                    <div class="product-details">
+                        <span><strong>Catalog:</strong> DM-0006</span>
+                        <span><strong>CAS:</strong> 1464851-21-5</span>
+                        <span><strong>Formula:</strong> C8H9N6</span>
+                        <span><strong>MW:</strong> 175.2</span>
+                        <span><strong>Purity:</strong> &lt;95%</span>
+                    </div>
+                    <a href="mailto:purchase@digitalmoleculess.com?subject=Inquiry%20for%20DM-0006" class="btn btn-small">Inquire Now</a>
                 </div>
 
             </div>
 
-        </div>
-    </section>
-
-    <!-- ===== Product Grid ===== -->
-    <section class="section">
-        <div class="container">
-
-            <div id="product-count" class="mb-20"></div>
-
-            <div id="product-grid" class="grid grid-4">
-                <!-- Products injected via JS -->
+            <!-- Add more products note -->
+            <div class="add-products-note">
+                <p>📦 <strong>Need more products?</strong> We have 20,000+ products available. Contact us for custom inquiries.</p>
             </div>
-
         </div>
     </section>
 
-    <!-- ===== Empty State ===== -->
-    <section id="empty-state" class="section" style="display: none;">
-        <div class="container text-center">
-            <h2>No Products Found</h2>
-            <p>Try adjusting your search or filter criteria.</p>
-        </div>
-    </section>
-
-    <!-- ===== Footer ===== -->
-    <footer class="footer">
-        <div class="container text-center">
-            <p>© 2026 Digital Molecules. All rights reserved.</p>
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>Digital Molecules</h4>
+                    <p>Impurity Standards &amp; Fine Chemicals</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">About</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p>Email: purchase@digitalmoleculess.com</p>
+                    <p>Phone: +91 8919727242</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Digital Molecules. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
-    <script src="js/products.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
