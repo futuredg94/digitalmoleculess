@@ -152,30 +152,38 @@
 
         .product-card .structure-image {
             width: 100%;
-            height: 160px;
-            background: linear-gradient(135deg, #f0f4fa 0%, #e3eaf2 100%);
+            height: 170px;
+            background: #f0f4fa;
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 14px;
-            border: 1px solid #e9edf2;
-            padding: 10px;
+            border: 2px dashed #b0c4d8;
+            padding: 12px;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+        }
+        .product-card:hover .structure-image {
+            border-color: #0f4c81;
         }
         .product-card .structure-image img {
             width: 100%;
-            max-width: 200px;
-            height: auto;
+            height: 100%;
+            max-width: 220px;
             max-height: 140px;
             object-fit: contain;
+            background: #ffffff;
+            display: block;
         }
-        .product-card .structure-image .no-structure {
+        .product-card .structure-image .placeholder-text {
             font-size: 0.85rem;
             color: #8aa0b8;
             text-align: center;
         }
-        .product-card .structure-image .no-structure i {
-            font-size: 2.5rem;
+        .product-card .structure-image .placeholder-text i {
+            font-size: 2.8rem;
             display: block;
             margin-bottom: 6px;
             color: #b0c4d8;
@@ -212,10 +220,6 @@
             color: #27ae60;
             font-weight: 700;
         }
-        .product-card .product-details .value .synonyms {
-            font-size: 0.75rem;
-            color: #5a6f87;
-        }
 
         .product-card .btn-group {
             display: flex;
@@ -236,7 +240,6 @@
             transition: background 0.3s ease;
         }
         .product-card .btn-sm-primary:hover { background: #0a3a62; }
-
         .product-card .btn-sm-outline {
             display: inline-block;
             background: transparent;
@@ -250,7 +253,6 @@
             transition: all 0.3s ease;
         }
         .product-card .btn-sm-outline:hover { background: #0f4c81; color: #fff; }
-
         .product-card .btn-sm-ghost {
             display: inline-block;
             background: transparent;
@@ -264,7 +266,6 @@
             transition: all 0.3s ease;
         }
         .product-card .btn-sm-ghost:hover { border-color: #0f4c81; color: #0f4c81; }
-
         .product-card .favorite-icon {
             float: right;
             color: #b0c4d8;
@@ -298,6 +299,160 @@
             border-color: #0f4c81;
         }
 
+        /* ===== CONTACT SECTION ===== */
+        .contact-section {
+            background: #ffffff;
+            padding: 60px 0 50px;
+            border-top: 1px solid #e9edf2;
+        }
+        .contact-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0a2a44;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+        .contact-section .contact-subtitle {
+            text-align: center;
+            color: #5a6f87;
+            margin-bottom: 40px;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        .contact-item {
+            text-align: center;
+            padding: 20px;
+            border-radius: 12px;
+            background: #f8fafc;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e9edf2;
+        }
+        .contact-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+        }
+        .contact-item i {
+            font-size: 2.2rem;
+            color: #0f4c81;
+            margin-bottom: 12px;
+        }
+        .contact-item h4 {
+            font-weight: 700;
+            color: #0a2a44;
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+        .contact-item p {
+            color: #5a6f87;
+            font-size: 0.9rem;
+        }
+        .contact-item a {
+            color: #0f4c81;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .contact-item a:hover {
+            color: #0a3a62;
+            text-decoration: underline;
+        }
+
+        /* Contact Form */
+        .contact-form-section {
+            background: #f8fafc;
+            padding: 50px 0 60px;
+        }
+        .contact-form-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+        .contact-form-wrapper .form-info h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0a2a44;
+            margin-bottom: 12px;
+        }
+        .contact-form-wrapper .form-info p {
+            color: #5a6f87;
+            margin-bottom: 20px;
+        }
+        .contact-form-wrapper .form-info .info-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+        .contact-form-wrapper .form-info .info-item i {
+            width: 36px;
+            height: 36px;
+            background: #e9edf2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0f4c81;
+            font-size: 1rem;
+        }
+
+        .contact-form-wrapper form {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 14px;
+            border: 1px solid #e9edf2;
+        }
+        .contact-form-wrapper form .form-group {
+            margin-bottom: 16px;
+        }
+        .contact-form-wrapper form label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #1a1a2e;
+            margin-bottom: 4px;
+        }
+        .contact-form-wrapper form input,
+        .contact-form-wrapper form textarea,
+        .contact-form-wrapper form select {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #dce3ec;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            transition: border-color 0.3s;
+            background: #ffffff;
+        }
+        .contact-form-wrapper form input:focus,
+        .contact-form-wrapper form textarea:focus,
+        .contact-form-wrapper form select:focus {
+            outline: none;
+            border-color: #0f4c81;
+        }
+        .contact-form-wrapper form textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .contact-form-wrapper form .btn-submit {
+            background: #0f4c81;
+            color: #fff;
+            padding: 12px 32px;
+            border: none;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            width: 100%;
+        }
+        .contact-form-wrapper form .btn-submit:hover {
+            background: #0a3a62;
+        }
+
         /* ===== FOOTER ===== */
         footer {
             background: #0a1f2e;
@@ -313,6 +468,11 @@
         /* ===== RESPONSIVE ===== */
         @media (max-width: 992px) {
             .product-grid { grid-template-columns: repeat(2, 1fr); }
+            .contact-grid { grid-template-columns: repeat(2, 1fr); }
+            .contact-form-wrapper {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -332,11 +492,18 @@
             .filter-bar .filter-group { justify-content: center; }
             .top-bar .container { flex-direction: column; gap: 4px; }
             .product-card .product-details { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .contact-form-wrapper { grid-template-columns: 1fr; }
+            .contact-form-wrapper .form-info .info-item {
+                font-size: 0.85rem;
+            }
         }
 
         @media (max-width: 480px) {
             .product-card .btn-group { flex-direction: column; }
             .product-card .btn-group a { text-align: center; }
+            .product-card .structure-image { height: 140px; }
+            .contact-section h2 { font-size: 1.5rem; }
         }
     </style>
 </head>
@@ -367,7 +534,7 @@
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#" class="active">Products</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
 </header>
@@ -413,11 +580,18 @@
     <div class="container">
         <div class="product-grid">
 
-            <!-- ===== PRODUCT 1: DM-0001 ===== -->
+            <!-- ============================================================ -->
+            <!-- PRODUCT 1: DM-0001                                             -->
+            <!-- To add image: Replace the placeholder div with:               -->
+            <!-- <img src="images/DM-0001.png" alt="Product Name" />           -->
+            <!-- ============================================================ -->
             <div class="product-card">
                 <div class="favorite-icon"><i class="far fa-heart"></i></div>
-                <div class="structure-image">
-                    <img src="https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/10197/PNG" alt="Risidipalm impurity-1 Structure" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'no-structure\'><i class=\'fas fa-flask\'></i>Structure<br>Not Available</div>';" />
+                <div class="structure-image" id="img-DM-0001">
+                    <div class="placeholder-text">
+                        <i class="fas fa-image"></i>
+                        <span>DM-0001</span>
+                    </div>
                 </div>
                 <div class="product-name">Risidipalm Impurity-1</div>
                 <div class="category-tag">Risidipalm</div>
@@ -438,11 +612,16 @@
                 </div>
             </div>
 
-            <!-- ===== PRODUCT 2: DM-0002 ===== -->
+            <!-- ============================================================ -->
+            <!-- PRODUCT 2: DM-0002                                             -->
+            <!-- ============================================================ -->
             <div class="product-card">
                 <div class="favorite-icon"><i class="far fa-heart"></i></div>
-                <div class="structure-image">
-                    <img src="https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/10198/PNG" alt="Risidipalm Impurity-2 Structure" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'no-structure\'><i class=\'fas fa-flask\'></i>Structure<br>Not Available</div>';" />
+                <div class="structure-image" id="img-DM-0002">
+                    <div class="placeholder-text">
+                        <i class="fas fa-image"></i>
+                        <span>DM-0002</span>
+                    </div>
                 </div>
                 <div class="product-name">Risidipalm Impurity-2 (Regio-isomer)</div>
                 <div class="category-tag">Risidipalm</div>
@@ -463,11 +642,16 @@
                 </div>
             </div>
 
-            <!-- ===== PRODUCT 3: DM-0003 ===== -->
+            <!-- ============================================================ -->
+            <!-- PRODUCT 3: DM-0003                                             -->
+            <!-- ============================================================ -->
             <div class="product-card">
                 <div class="favorite-icon"><i class="far fa-heart"></i></div>
-                <div class="structure-image">
-                    <img src="https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/441301/PNG" alt="Abacavir N-nitroso Structure" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'no-structure\'><i class=\'fas fa-flask\'></i>Structure<br>Not Available</div>';" />
+                <div class="structure-image" id="img-DM-0003">
+                    <div class="placeholder-text">
+                        <i class="fas fa-image"></i>
+                        <span>DM-0003</span>
+                    </div>
                 </div>
                 <div class="product-name">Abacavir N-nitroso</div>
                 <div class="category-tag">Abacavir</div>
@@ -488,11 +672,16 @@
                 </div>
             </div>
 
-            <!-- ===== PRODUCT 4: DM-0004 ===== -->
+            <!-- ============================================================ -->
+            <!-- PRODUCT 4: DM-0004                                             -->
+            <!-- ============================================================ -->
             <div class="product-card">
                 <div class="favorite-icon"><i class="far fa-heart"></i></div>
-                <div class="structure-image">
-                    <img src="https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/644241/PNG" alt="Nilotinib N-nitroso Structure" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'no-structure\'><i class=\'fas fa-flask\'></i>Structure<br>Not Available</div>';" />
+                <div class="structure-image" id="img-DM-0004">
+                    <div class="placeholder-text">
+                        <i class="fas fa-image"></i>
+                        <span>DM-0004</span>
+                    </div>
                 </div>
                 <div class="product-name">Nilotinib N-nitroso</div>
                 <div class="category-tag">Nilotinib</div>
@@ -513,11 +702,16 @@
                 </div>
             </div>
 
-            <!-- ===== PRODUCT 5: DM-0005 ===== -->
+            <!-- ============================================================ -->
+            <!-- PRODUCT 5: DM-0005                                             -->
+            <!-- ============================================================ -->
             <div class="product-card">
                 <div class="favorite-icon"><i class="far fa-heart"></i></div>
-                <div class="structure-image">
-                    <img src="https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/10620/PNG" alt="Tenofovir Impurity K Structure" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'no-structure\'><i class=\'fas fa-flask\'></i>Structure<br>Not Available</div>';" />
+                <div class="structure-image" id="img-DM-0005">
+                    <div class="placeholder-text">
+                        <i class="fas fa-image"></i>
+                        <span>DM-0005</span>
+                    </div>
                 </div>
                 <div class="product-name">Tenofovir Impurity K</div>
                 <div class="category-tag">Tenofovir</div>
@@ -538,11 +732,16 @@
                 </div>
             </div>
 
-            <!-- ===== PRODUCT 6: DM-0006 ===== -->
+            <!-- ============================================================ -->
+            <!-- PRODUCT 6: DM-0006                                             -->
+            <!-- ============================================================ -->
             <div class="product-card">
                 <div class="favorite-icon"><i class="far fa-heart"></i></div>
-                <div class="structure-image">
-                    <img src="https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/11688543/PNG" alt="(Z)-9-Propenyl adenine Structure" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'no-structure\'><i class=\'fas fa-flask\'></i>Structure<br>Not Available</div>';" />
+                <div class="structure-image" id="img-DM-0006">
+                    <div class="placeholder-text">
+                        <i class="fas fa-image"></i>
+                        <span>DM-0006</span>
+                    </div>
                 </div>
                 <div class="product-name">(Z)-9-Propenyl Adenine</div>
                 <div class="category-tag">Tenofovir</div>
@@ -572,6 +771,99 @@
             <a href="#">3</a>
             <a href="#">…</a>
             <a href="#">Next →</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- ===== CONTACT SECTION =====                                   -->
+<!-- ============================================================ -->
+<section class="contact-section" id="contact">
+    <div class="container">
+        <h2>Get in Touch</h2>
+        <p class="contact-subtitle">Have questions or need a quote? We're here to help.</p>
+
+        <div class="contact-grid">
+            <!-- Phone -->
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <h4>Phone</h4>
+                <p><a href="tel:+918919727242">+91 8919727242</a></p>
+            </div>
+            <!-- Email -->
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <h4>Email</h4>
+                <p><a href="mailto:purchase@digitalmolecules.com">purchase@digitalmolecules.com</a></p>
+            </div>
+            <!-- Address -->
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <h4>Address</h4>
+                <p>Hyderabad, Telangana, India</p>
+            </div>
+            <!-- Hours -->
+            <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <h4>Working Hours</h4>
+                <p>Mon–Sat, 9:00 AM – 6:00 PM</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT FORM SECTION ===== -->
+<section class="contact-form-section">
+    <div class="container">
+        <div class="contact-form-wrapper">
+            <!-- Left: Info -->
+            <div class="form-info">
+                <h3>Send Us a Message</h3>
+                <p>We'll get back to you within 24 hours.</p>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span><a href="tel:+918919727242" style="color:#0f4c81; font-weight:600;">+91 8919727242</a></span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span><a href="mailto:purchase@digitalmolecules.com" style="color:#0f4c81; font-weight:600;">purchase@digitalmolecules.com</a></span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Hyderabad, Telangana, India</span>
+                </div>
+            </div>
+
+            <!-- Right: Form -->
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Your full name" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="you@example.com" required />
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+91 XXXXX XXXXX" />
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject">
+                        <option>Product Inquiry</option>
+                        <option>Request a Quote</option>
+                        <option>Custom Synthesis</option>
+                        <option>Order Support</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Tell us about your requirement..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
         </div>
     </div>
 </section>
